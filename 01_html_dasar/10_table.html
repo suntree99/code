@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HTML Table</title>
+</head>
+
+<body>
+  <!-- Simple Table -->
+  <table>
+    <tr>
+      <td>baris 1, kolom 1</td>
+      <td>baris 1, kolom 2</td>
+    </tr>
+    <tr>
+      <td>baris 2, kolom 1</td>
+      <td>baris 2, kolom 2</td>
+    </tr>
+  </table>
+
+  <br />
+  <hr />
+  <br />
+
+  <!-- Complex Table (2 sumbu header) -->
+  <table border="1" cellspacing="0" cellpadding="5">
+    <thead>
+      <tr>
+        <!-- baris header -->
+        <th></th>
+        <th>Kolom 1</th>
+        <th>Kolom 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Baris 1</th>
+        <!-- header kiri baris 1 -->
+        <td>Baris 1, Kolom 1</td>
+        <td>Baris 1, Kolom 2</td>
+      </tr>
+      <tr>
+        <th>Baris 2</th>
+        <!-- header kiri baris 2 -->
+        <td>Baris 2, Kolom 1</td>
+        <td>Baris 2, Kolom 2</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br />
+  <hr />
+  <br />
+
+  <!-- Table Merging - colspan & rowspan -->
+  <table border="1" cellspacing="0" cellpadding="5">
+    <tr>
+      <td rowspan="3">rowspan 3</td>
+      <td colspan="2">colspan 2</td>
+      <td>1,4</td>
+    </tr>
+    <tr>
+      <td>2,2</td>
+      <td>2,3</td>
+      <td>2,4</td>
+    </tr>
+    <tr>
+      <td>3,2</td>
+      <td>3,3</td>
+      <td>3,4</td>
+    </tr>
+    <tr>
+      <td>4,1</td>
+      <td>4,2</td>
+      <td>4,3</td>
+      <td>4,4</td>
+    </tr>
+  </table>
+</body>
+
+</html>
