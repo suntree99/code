@@ -1,0 +1,39 @@
+div{
+	width: 600px;
+	margin: 10px auto;
+	box-sizing: border-box;
+}
+
+.satu{
+	background-color: royalblue;
+	padding: 10px;
+	border: 15px solid red;
+}
+
+.dua{
+	background-color: lightgreen;
+	padding: 30px;
+  border-top: 10px solid orange;
+  border-right: 10px dotted pink;
+  border-bottom: 10px dashed purple;
+  border-left: 10px double yellow;
+}
+
+/*
+  padding tidak bisa diisi nilai negatif (-) dan auto.
+  padding menambah ukuran elemen.
+*/
+
+/*
+  border :
+  - solid;
+  - dotted;
+  - dashed;
+  - double;
+  border menambah ukuran elemen.
+*/
+
+/*
+  total dimensi = width/heigh + padding + border.
+  kecuali dengan box-sizing (membuat ukuran elemen tetap).
+*/
