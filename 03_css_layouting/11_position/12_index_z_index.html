@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Z-Index</title>
+  <style>
+
+    div {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+    }
+
+    .satu {
+      background-color: salmon;
+      z-index: 9999;
+    }
+
+    .dua {
+      background-color: lightgreen;
+      top: 100px;
+      left: 100px;
+      z-index: -1;
+    }
+
+    .tiga {
+      background-color: royalblue;
+      top: 200px;
+      left: 200px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="satu"></div>
+    <div class="dua"></div>
+    <div class="tiga"></div>
+    <div class="empat"></div>
+  </div>
+</body>
+</html>
+
+<!-- 
+position :
+- static (default, elemen berada dalam bidang yang sama)
+- relative (elemen berpindah 1 dimensi, tempat semula masih ada, bergerak relatif terhadap posisi semula)
+- absolute (elemen berpindah 1 dimensi, tempat semula hilang, bergerak relatif terhadap parent-nya )
+- fixed (elemen berpindah 1 dimensi, posisi tetap walau di scroll)
+ -->
