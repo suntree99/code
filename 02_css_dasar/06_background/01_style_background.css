@@ -1,0 +1,16 @@
+body{
+/*
+  background-color: lightgrey;
+	background-image: url(bg/bg2.png);
+  background-position: right top;
+	background-repeat: repeat; 
+*/
+/*
+  background-position: x-position (left, center, right, x%, x-pos) y-position (top, center, bottom, y%, y-pos);
+  background-repeat: repeat (default), repeat-x, repeat-y, no-repeat; 
+*/
+/*
+  background: color url() position x position y repeat; 
+*/
+  background: lightgrey url(bg/bg2.png) right top no-repeat;
+}
