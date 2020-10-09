@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Penumpang Angkot</title>
+  <script src="penumpang.js"></script>
+</head>
+<body>
+  
+</body>
+</html>
+
+<!-- 
+Pengelolaan Penumpang :
+- Penumpang Niak
+  * tambahPenumpang()
+    - 2 parameter
+      * nama penumpang
+      * array penumpang
+    - rules :
+      * jika angkot kosong, penumpang naik di kursi pertama
+      * penumpang berikutnya duduk di kursi selanjutnya secara berurutan
+      * jika ada kursi kosong (karena penumpang turun), penumpang yang naik berikutnya duduk di kursi kosong terlebih dahulu
+      * asumsi kursi tidak akan penuh dan akan bertamhan terus jika ada penumpang naik
+      * nama penumpang tidak boleh sama, untuk menghindari kebingungan ketika nanti penupang turun
+
+- Penumpang Turun
+  * hapusPenumpang()
+      * nama penumpang
+      * array penumpang
+    - rules :
+      * jika angkot kosong, tampilkan pesan angkot kosong
+      * jika nama penumpang ada di dalam angkot, hapus penumpang dan isi dengan undefined
+      * jika nama penumpang tidak ada di dalam angkot, tampilkan pesan nama penumpang tidak ada dalam angkot
+ -->
