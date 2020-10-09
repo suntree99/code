@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array</title>
+</head>
+<body>
+  
+  <script>
+    
+  // Array adalah variabel yang lebih sakti (bisa menampung lebih dari satu nilai).
+  // - variable jamak yang memiliki banyak elemen yang diacu dengan nama yang sama
+  // - kumpulan pasangan key dan nilai (key dan value pair)
+  // - key adalah index pada array dengan tipe integer yang dimulai dari 0
+  // - array pada javascript bertipe object
+  // - array pada javascript memiliki fungsi / method length untuk menghigtung jumlah elemen di dalamnya
+  // - fungsi array:
+  //   * mempermudah pengelolaan nilai / value / data : penelusuran dan pencarian
+  //   * manajemen memori
+  // - elemen pada array boleh memiliki tipe data yang berbeda
+
+  var hari = ["Ahad", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu"]; // array string
+  var binatang = ["Kucing", "Kelinci", "Monyet", "Panda", "Koala", "Sapi"]; // array string
+  var angka = [10, 123, 2020]; // array angka
+  var myArr = ["teks", 123, true]; // array campuran
+  var myFunc = function() {
+    alert("Hello World");
+  };
+  var myArr2 = ["teks", 123, true, myFunc]; // array campuran kompleks
+  var myArr3 = ["teks", 123, true, myFunc, [4,5,6]]; // array multidimensi/bersarang (array di dalam array)
+
+  console.log(myArr3[4][1]);
+
+  console.log(hari[2]);
+  console.log(hari.length);
+  console.log(binatang[0]);
+  console.log(binatang.length);
+
+  </script>
+</body>
+</html>
