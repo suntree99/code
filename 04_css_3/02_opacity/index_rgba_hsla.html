@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RGBa & HSLa</title>
+  <style>
+    body {
+      background-image: url(image.png);
+    }
+
+    .satu {
+      width: 300px;
+      height: 300px;
+      background-color: rgba(255,102,0,0.5);
+/*    background-color: rgba(R,G,B,alfa <pt | %>); */
+      position: relative;   
+    }
+
+    .dua {
+      width: 100px;
+      height: 100px;
+      background-color: hsla(222,71%,51%,1);
+ /*   background-color: hsla(H,S<%>,L<%>,alfa <pt | %>); */
+      position: absolute;
+      bottom: -50px;
+      right: -50px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="satu">
+    <div class="dua"></div>
+  </div>
+
+</body>
+</html>
