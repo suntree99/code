@@ -1,0 +1,42 @@
+/*
+Bobot Nilai :
+
+Element : 1
+Class   : 10
+Id      : 100
+Inline  : 1000
+*/
+/*--------------------------------------------------------------*/
+/*Element vs Element (1 vs 1)*/
+
+p { color : red; }
+
+p { color : blue; }
+
+/*Jika nilainya sama, maka nilai terakhir akan menimpa nilai yang terdahulu. */
+/*--------------------------------------------------------------*/
+/*Id vs Element (100 vs 1)*/
+
+#label1 { color : red; }
+
+label { color : orange; }
+
+/*Nilai yang lebih besar akan ditampilkan, tidak perduli dengan urutan. */
+/*--------------------------------------------------------------*/
+/*Element-Id-Element vs Elemen-Id-Element-Class (102 vs 112)*/
+
+ul#sarapan li { 
+  color : green;
+}
+
+ul#sarapan li.favorit { 
+  color : red;
+}
+
+/*Jika tanpa ul#sarapan pada bagian li.favorit maka nilainya hanya 11 sehingga akan kalah dan warna favorit tidak ditampilkan*/
+/*--------------------------------------------------------------*/
+
+/*
+Untuk menghitung specificity, kunjungi:;
+http://specificity.keegan.st
+*/
