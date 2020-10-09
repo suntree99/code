@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Membuat dan Menjalankan Function</title>
+</head>
+<body>
+
+  <script>
+    
+  // Membuat function untuk menjumlahkan 2 kubus
+  // - ketahui sisi masing2 kubus
+  // - hitung volume masing2 kubus
+  // - jumlahkan hasilnya
+  // - kembalikan nilai jawabannya
+
+  function jumlahVolumeDuaKubus(a, b) {
+    var volumeA;
+    var volumeB;
+    var total;
+
+    volumeA = a * a * a;
+    volumeB = b * b * b;
+
+    total = volumeA + volumeB;
+    return total;
+  }
+
+  alert(jumlahVolumeDuaKubus(8, 3));
+  alert(jumlahVolumeDuaKubus(10, 15));
+
+  </script>
+</body>
+</html>
+ 

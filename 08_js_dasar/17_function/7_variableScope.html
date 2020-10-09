@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Variable Scope</title>
+</head>
+<body>
+
+  <script>
+    
+  // block Scope vs function scope
+
+  // block scope (pada C++)
+  // int i = 2;
+
+  // if (1%2==0) {
+  //   bool genap = true;
+  // }
+
+  // if (genap) {
+  //   printf("genap!");
+  // }
+
+  // hasilnya tidak tampil, karena block scope sehingga gepan yang dibawah tidak dikenali.
+
+  // function scope
+  var i = 2;
+
+  if (i%2==0) {
+    var genap = true;
+  }
+
+  if (genap) {
+    alert("genap!");
+  }
+
+  // hasil tampil karena genap di bawah dikenali dari nilai di atasnya.
+
+  var a = 1;
+
+  function tes() {
+    var b = 2;
+    console.log(a); // item dalam dapat mengakses nilai luar
+  }
+
+  tes();
+  // console.log(b); // item luar tidak dapat mengakses nilai dalam function
+
+  </script>
+</body>
+</html>

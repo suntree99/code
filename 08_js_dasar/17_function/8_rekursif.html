@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rekursif</title>
+</head>
+<body>
+
+  <script>
+
+  // Harus ada base case untuk menghentikan rekursif agar tidak terjadi infinite recursion
+
+  // function tampilAngka(n) {
+  //   if (n===0) {
+  //     return;
+  //   }
+  //   console.log(n);
+  //   return tampilAngka(n-1)
+  // }
+
+  // tampilAngka(10);
+
+  // Faktorial
+  function faktorial(n) {
+    if (n===0) {
+      return 1;
+    }
+    return n*faktorial(n-1);
+  }
+
+  console.log(faktorial(5));
+
+  // Setiap looping bisa dibuat rekursif, tapi tidak sebalikanya
+
+  // Implementasi Rekursif :
+  // - menggantikan looping
+  // - Fibonacci
+  // - pencarian dan penelusuran pada struktur dan list dan tree
+  // - bahasa pemrograman yang tidak memiliki pengulangan
+  //   * haskel, erlang, prolog, dll.
+  // - dll.
+
+  </script>
+</body>
+</html>
