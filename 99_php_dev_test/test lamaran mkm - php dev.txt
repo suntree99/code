@@ -1,0 +1,38 @@
+Aplikasi yang perlu disiapkan:
+- Apache/Nginx + PHP + MySQL Server (atau SQL server lainnya), untuk windows bisa menggunakan XAMPP / WAMPP
+- GitHub untuk upload hasil test, buat repo public dengan nama: {nama depan}-md5('Test MKM 2020 - {nama lengkap}')
+  contoh nama repo untuk peserta dengan nama John Smith: "john-aa0dc796220c9670c4ccc9e7379db687" (tanpa petik dua)
+
+
+Buat aplikasi sederhana dengan fitur-fitur sebagai berikut:
+- Halaman Home (entry point aplikasi)
+  tampilkan waktu lokal saat ini (jam digital, HH:mm:ss berupa text) yang terupdate secara realtime (setiap detik)
+  tombol "hello" yang mengambil data status login ke database,
+    jika user masih dalam keadaan login maka mengeluarkan pesan "Hai {username}, waktu login anda {waktu login}"
+    tetapi jika user sudah dalam keadaan logout maka langsung pindah ke halaman login
+- Halaman Login
+  tombol "registrasi" untuk pindah ke halaman registrasi
+  masukkan username, password untuk masuk ke aplikasi
+  jika login sukses maka status dan waktu login untuk user ybs tersimpan di database, pindah ke halaman home
+- Halaman Registrasi
+  user bisa masukkan username, password, dan repeat password untuk registrasi
+  jika registrasi sukses maka data user tersimpan di database, pindah ke halaman login
+- Fitur persistent-login
+  jika user dalam kondisi sudah login dan browser ditutup kemudian dibuka lagi,
+  maka jika tombol "hello" tetap mengeluarkan pesan username dan waktu login
+- (optional) Fitur single session (bonus poin)
+  jika user dalam kondisi sudah login di browser A (mis. firefox), kemudian membuka browser B (mis. chrome) dan login disana
+  maka jika tombol "hello" pada browser A ditekan, browser A akan pindah ke halaman login (auto logout)
+  kemudian (setelahnya) jika tombol "hello" pada browser B ditekan, browser B tetap akan menampilkan pesan username dan waktu login
+
+
+Ketentuan:
+- open all, utamakan fitur-fitur yang diminta selesai terlebih dahulu baru polish tampilan
+- aplikasi harus terpisah menjadi 2 bagian (folder) terpisah, front-end dan back-end
+  pada folder front-end hanya boleh berisi file HTML, JS, dan CSS (tidak boleh ada PHP)
+  pada folder back-end hanya berisi file PHP
+  framework javascript yang boleh digunakan untuk front-end hanya jQuery saja
+  untuk back-end tidak boleh menggunakan framework PHP apapun (laravel / codeigniter / dll)
+  pemanggilan script back-end oleh front-end harus menggunakan non-blocking AJAX (.get() / .post() jika menggunakan jQuery)
+- hasil pengerjaan diupload ke GitHub yang sudah disiapkan sebelumnya, dan hanya boleh ada 2 item saja (folder front-end & back-end) pada root repo
+- batas waktu pengerjaan 3 jam sejak soal tes diberikan, dilihat dari waktu dikirimkannya file soal dan waktu commit terakhir di GitHub
