@@ -1,0 +1,20 @@
+h1 {
+  font-style: italic;
+  /* kemiringan font : normal, italic, oblique */
+  font-variant: small-caps;
+  /* small caps font : normal, small-caps */
+  font-weight: bold;
+  /* ketebalan font : lighter, normal, 100-900, bold, bolder */
+  font-size: 50px;
+  /* ukuran font : px | % | em */
+  line-height: normal;
+  /* spasi antar baris : normal, px, em */
+  font-family: "arial", verdana, san-serif;
+  /* jenis font */
+}
+
+p {
+  /*font : font-style font-variant font-weight font-size/line-height font-family */
+  font: italic normal bold 25px/50px calibri, verdana, san-serif;
+  /*font-size dan font-family wajib ada dalam property font */
+}
