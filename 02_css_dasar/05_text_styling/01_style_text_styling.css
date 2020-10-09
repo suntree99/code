@@ -1,0 +1,18 @@
+/* Disalin dari codepen (https://codepen.io/suntree/pen/VwYgPLE) */
+
+h1{
+  font-size : 150px;
+  color: rgb(110,80,212); /* warna tulisan : color, hexadecimal, rgb(), hsl() - colorpicker.com */
+}
+
+p{
+  text-align: justify; /* format tulisan : left, right, center, justify */
+  text-indent: 100px; /* indentasi tulisan (menjorok) : px */
+  text-transform: capitalize; /* mengubah huruf besar, kecil, kapital : none, lowercase, uppercase, capitalize */
+  letter-spacing: normal; /* jarak antar huruf : normal, px */
+  word-spacing: 10px; /* jarak antar kata : normal, px */
+}
+
+a{
+  text-decoration: none; /* dekorasi tulisan : none, underline, overline, line-through */
+}
