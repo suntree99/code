@@ -1,0 +1,90 @@
+/*
+float :
+- none; (default)
+- left;
+- right;
+*/
+
+.container {
+  width: 600px;
+  border: 1px solid black;
+  margin: auto;
+  padding: 5px;
+}
+
+.satu, .dua, .tiga {
+  width: 100px;
+  height: 100px;
+}
+
+.satu {
+  background-color: salmon;
+}
+
+.dua {
+  background-color: limegreen;
+  float: right;
+}
+
+.tiga {
+  background-color: lightskyblue;
+}
+
+/*
+- text wrapping
+*/
+
+img {
+  float: left;
+}
+
+/*
+- image galerry
+*/
+
+.kotak {
+  width: 80px;
+  height: 80px;
+  background-color: salmon;
+  color: white;
+  text-align: center;
+  line-height: 80px;
+  font-size: 30px;
+  margin: 2px;
+  float: left;
+}
+
+/*
+- multi-column layout
+*/
+
+.kiri {
+  width: 150px;
+  height: 500px;
+  background-color: salmon;
+  float: left;
+  box-sizing: border-box;
+}
+
+.tengah {
+  width: 300px;
+  height: 500px;
+  background-color: lightskyblue;
+  float: left;
+  box-sizing: border-box;
+}
+
+.kanan {
+  width: 150px;
+  height: 500px;
+  background-color: limegreen;
+  float: left;
+  box-sizing: border-box;
+}
+
+/*
+cara menghentikan/membersihkan float yang kolaps:
+- menggunakan properti overflow
+- menggunakan <div> kosong
+- menggunakan teknk micro clearfix
+*/

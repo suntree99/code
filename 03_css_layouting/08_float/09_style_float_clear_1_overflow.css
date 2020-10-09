@@ -1,0 +1,30 @@
+/*
+float :
+- none; (default)
+- left;
+- right;
+*/
+
+.container {
+  width: 600px;
+  border: 1px solid black;
+  margin: auto;
+  padding: 5px;
+}
+
+/*
+- text wrapping
+*/
+
+img {
+  float: left;
+}
+
+/*
+cara menghentikan/membersihkan float yang kolaps:
+- menggunakan properti overflow
+*/
+
+.container {
+  overflow: auto;
+}
