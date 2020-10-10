@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 10 Okt 2020 pada 03.26
+-- Waktu pembuatan: 10 Okt 2020 pada 11.13
 -- Versi server: 10.4.14-MariaDB
 -- Versi PHP: 7.4.10
 
@@ -360,7 +360,7 @@ CREATE TABLE `pma__recent` (
 --
 
 INSERT INTO `pma__recent` (`username`, `tables`) VALUES
-('root', '[{\"db\":\"phpmvc\",\"table\":\"karyawan\"},{\"db\":\"phpdev\",\"table\":\"user\"},{\"db\":\"phpdasar\",\"table\":\"user\"},{\"db\":\"phpdasar\",\"table\":\"karyawan\"},{\"db\":\"dodol\",\"table\":\"mahasiswa\"},{\"db\":\"phpdasar\",\"table\":\"Karyawan\"}]');
+('root', '[{\"db\":\"phpdasar\",\"table\":\"karyawan\"},{\"db\":\"phpmvc\",\"table\":\"karyawan\"},{\"db\":\"phpdev\",\"table\":\"user\"},{\"db\":\"phpdasar\",\"table\":\"user\"},{\"db\":\"dodol\",\"table\":\"mahasiswa\"},{\"db\":\"phpdasar\",\"table\":\"Karyawan\"}]');
 
 -- --------------------------------------------------------
 
@@ -467,7 +467,7 @@ CREATE TABLE `pma__userconfig` (
 --
 
 INSERT INTO `pma__userconfig` (`username`, `timevalue`, `config_data`) VALUES
-('root', '2020-10-10 01:17:49', '{\"Console\\/Mode\":\"collapse\",\"lang\":\"id\"}');
+('root', '2020-10-10 09:09:36', '{\"Console\\/Mode\":\"collapse\",\"lang\":\"id\"}');
 
 -- --------------------------------------------------------
 
