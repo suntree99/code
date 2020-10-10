@@ -23,6 +23,6 @@
       <h3><a href="daftar_asisten2.php">Kembali</a></h3>
     <?php  } else { ?>
       <h1>Anda telah terdaftar! (Ceritanya..)</h1>
-    <? } ?>
+    <?php } ?>
   </body>
 </html>

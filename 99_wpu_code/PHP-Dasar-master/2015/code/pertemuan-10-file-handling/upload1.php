@@ -23,7 +23,7 @@ if( isset($_FILES["image"]) ) {
 
 	// mengecek apakah ekstensi file yang diupload, ada di daftar ekstensi yang diijinkan
 	// jika ada, berarti file boleh diupload
-	if( ($file_type != "image/jpg")  ||
+	if ( ($file_type != "image/jpg")  ||
 		($file_type != "image/jpeg") ||
 		($file_type != "image/gif")  ||
 		($file_type != "image/png")  &&
@@ -32,7 +32,7 @@ if( isset($_FILES["image"]) ) {
 				<script>
 					alert('Jenis file salah, harap pilih file gambar');
 				</script>
-			";
+				;"
 
 	} else {
 		// mengecek apakah file lebih besar dari 1MB

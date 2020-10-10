@@ -8,3 +8,4 @@
   p = push
   g = log --all --decorate --oneline --graph
   f = fetch
+  am = commit -am
