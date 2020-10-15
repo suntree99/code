@@ -27,16 +27,15 @@ if( isset($_FILES["image"]) ) {
 		($file_type != "image/jpeg") ||
 		($file_type != "image/gif")  ||
 		($file_type != "image/png")  &&
-		(!in_array($file_ext, $extensions) ) {
+		(!in_array($file_ext, $extensions)) ) {
 		$status = "
 				<script>
 					alert('Jenis file salah, harap pilih file gambar');
 				</script>
-				;"
-
+				";
 	} else {
 		// mengecek apakah file lebih besar dari 1MB
-		if( $file_size > 1048576 ) {
+		if ( $file_size > 1048576 ) {
 			$status = "
 				<script>
 					alert('Ukuran file terlalu besar');
@@ -57,10 +56,7 @@ if( isset($_FILES["image"]) ) {
 			}
 		}
 	}
-
-
 }
- 
 ?>
 
 
