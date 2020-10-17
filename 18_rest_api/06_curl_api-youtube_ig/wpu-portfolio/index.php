@@ -1,3 +1,15 @@
+<?php
+$curl = curl_init();
+curl_setopt($curl, CURLOPT_URL, 'GET https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UCkXmLjEr95LVtGuIm3l2dPg&key=AIzaSyDRjXn-p234eXcEjwwEIedvwKctP0qBs_Q');
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+$result = curl_exec($curl);
+curl_close($curl);
+
+$result = json_decode($result, true);
+var_dump($result);
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -112,7 +124,22 @@
           <div class="row mt-3 pb-3">
             <div class="col">
               <div class="ig-thumbnail">
-                <img src="img/thumbs/2.png" width="100px">
+                <img src="img/thumbs/1.png">
+              </div>
+              <div class="ig-thumbnail">
+                <img src="img/thumbs/2.png">
+              </div>
+              <div class="ig-thumbnail">
+                <img src="img/thumbs/3.png">
+              </div>
+              <div class="ig-thumbnail">
+                <img src="img/thumbs/4.png">
+              </div>
+              <div class="ig-thumbnail">
+                <img src="img/thumbs/5.png">
+              </div>
+              <div class="ig-thumbnail">
+                <img src="img/thumbs/6.png">
               </div>
             </div>
           </div>
