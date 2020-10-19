@@ -13,12 +13,15 @@ class Mahasiswa extends REST_Controller
    {
       parent::__construct();
       $this->load->model('Mahasiswa_model', 'mahasiswa');
-   }
 
+      $this->methods['index_get']['limit'] = 5;
+      $this->methods['index_delete']['limit'] = 5;
+      $this->methods['index_post']['limit'] = 5;
+      $this->methods['index_put']['limit'] = 5;
+   }
    public function index_get()
    {
       $id = $this->get('id');
-
       if ($id === null) {
          $mahasiswa = $this->mahasiswa->getMahasiswa();
       } else {
@@ -50,11 +53,11 @@ class Mahasiswa extends REST_Controller
       } else {
          if ($this->mahasiswa->deleteMahasiswa($id) > 0) {
             // ok
-            $this->set_response([
+            $this->response([
                'status' => true,
                'id' => $id,
                'message' => 'data deleted'
-            ], REST_Controller::HTTP_OK); // jika no content tidak tampil pesan
+            ], REST_Controller::HTTP_OK);
          } else {
             // id not found
             $this->response([
@@ -90,7 +93,6 @@ class Mahasiswa extends REST_Controller
    public function index_put()
    {
       $id = $this->put('id');
-
       $data = [
          'nrp' => $this->put('nrp'),
          'nama' => $this->put('nama'),
