@@ -11,7 +11,7 @@
 
 // Array
 // variabel yang dapat memiliki banyak nilai
-// pasangan nilai dan indeks yang dimuali dari 0
+// pasangan indeks dan nilai (key and value pair) yang dimuali dari index 0
 
 // cara membuat array versi lama
 $hari = array("Senin", "Selasa", "Rabu");

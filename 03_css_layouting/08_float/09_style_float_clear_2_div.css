@@ -30,8 +30,8 @@ float :
 
 /*
 cara menghentikan/membersihkan float yang kolaps:
-- menggunakan <div> kosong
-diletakan setelah elemen yang ingin dikosongkan
+- menggunakan properti clear melalui <div> kosong
+diletakan setelah elemen yang ingin dibersihkan floatnya
 */
 
 .clear {

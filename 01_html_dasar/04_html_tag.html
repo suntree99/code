@@ -5,145 +5,147 @@
 <!-- Tag HTML dengan atribut bahasa = inggris -->
 <html lang="en">
 
-<!-- Tag Head dan yang ada dalamnya -->
+  <!-- Tag Head dan tag-tag di dalamnya -->
+  <head>
 
-<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Kuliah Pemrograman Web">
+    <meta name="keywords" content="HTML,CSS,Javascript">
+    <meta name="author" content="Budi Darmawan">
 
-  <!-- Metadata -->
-  <meta charset="UTF-8">
-  <meta name="description" content="Kuliah Pemrograman Web">
-  <meta name="keywords" content="HTML,CSS,Javascript">
-  <meta name="author" content="Budi Darmawan">
+    <title>HTML Tags</title> <!-- Judul halaman (nama tab) -->
+    <style></style> <!-- CSS, untuk menyimpan style css -->
+    <script></script> <!-- Javascript (sebaiknya disimpan di bawah sebelum tutup body) -->
 
-  <title>HTML Tags</title> <!-- Judul halaman (nama tab) -->
-  <style></style> <!-- CSS, untuk menyimpan style css -->
-  <script></script> <!-- Javascript (sebaiknya disimpan di body terbawah) -->
+  </head>
 
-</head>
+  <!-- Tag Body dan tag-tag di dalamnya -->
+  <body>
 
-<!-- Tag Body dan yang ada dalamnya -->
+    <!-- Heading -->
+    <h1>h1</h1> <!-- heading 1 -->
+    <h2>h2</h2> <!-- heading 2 -->
+    <h3>h3</h3> <!-- heading 3 -->
+    <h4>h4</h4> <!-- heading 4 -->
+    <h5>h5</h5> <!-- heading 5 -->
+    <h6>h6</h6> <!-- heading 6 -->
 
-<body>
+    <!-- Paragraf  -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quibusdam magnam blanditiis, ea iusto autem odio
+      dolor aliquam a suscipit dolore fugiat doloribus animi aspernatur in eum, assumenda, quae est.</p>
 
-  <!-- Heading -->
-  <h1>h1</h1> <!-- heading 1 -->
-  <h2>h2</h2> <!-- heading 2 -->
-  <h3>h3</h3> <!-- heading 3 -->
-  <h4>h4</h4> <!-- heading 4 -->
-  <h5>h5</h5> <!-- heading 5 -->
-  <h6>h6</h6> <!-- heading 6 -->
+    <!-- Pendukung dan dekorasi teks -->
+    <br> <!-- baris baru (enter) -->
+    <hr> <!-- garis horizontal -->
+    <b>bold</b> <!-- huruf tebal -->
+    <i>italic</i> <!-- huruf miring -->
+    <u>underline</u> <!-- huruf bergaris bawah -->
+    <em>emphesize</em> <!-- huruf miring (emphesize) -->
+    <strong>strong</strong> <!-- huruf tebal (penekanan) -->
+    <a href="">link</a> <!-- hyperlink -->
+    <img src="04_image.png"> <!-- menambahkan gambar -->
 
-  <!-- Paragraf  -->
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quibusdam magnam blanditiis, ea iusto autem odio
-    dolor aliquam a suscipit dolore fugiat doloribus animi aspernatur in eum, assumenda, quae est.</p>
+    <!-- List (bullets & numbering) -->
+    <!-- Unordered List -->
+    <ul>
+      <li>Bullet list 1</li>
+      <li>Bullet list 2</li>
+      <li>Bullet list 3</li>
+    </ul>
+    <!-- Ordered List -->
+    <ol>
+      <li>Numbering list 1</li>
+      <li>Numbering list 2</li>
+      <li>Numbering list 3</li>
+    </ol>
+    <!-- List lainnya -->
+    <dl>Definition List
+      <dt>Terminology List</dt>
+      <dd>Description List</dd>
+    </dl>
 
-  <!-- Pendukung dan dekorasi teks -->
-  <br> <!-- baris baru (enter) -->
-  <hr> <!-- garis horizontal -->
-  <b>bold</b> <!-- huruf tebal -->
-  <i>italic</i> <!-- huruf miring -->
-  <u>underline</u> <!-- huruf bergaris bawah -->
-  <em>emphesize</em> <!-- huruf miring (emphesize) -->
-  <strong>strong</strong> <!-- huruf tebal (penekanan) -->
-  <img src="04_image.png"> <!-- menambahkan gambar -->
+    <!-- Tabel -->
+    <table border="1" cellspacing="0" cellpadding="5">
 
-  <!-- Hyperlink -->
-  <a href="">link</a>
+      <thead>
+        <!-- table head -->
+        <tr>
+          <!-- table row head -->
+          <th>X</th> <!-- table head X -->
+          <th>Kolom 1</th> <!-- table head kolom 1 -->
+          <th>Kolom 2</th> <!-- table head kolom 2 -->
+        </tr>
+      </thead>
 
-  <!-- List (bullets & numbering) -->
-  <!-- Unordered List -->
-  <ul>
-    <li>Bullet list 1</li>
-    <li>Bullet list 2</li>
-    <li>Bullet list 3</li>
-  </ul>
-  <!-- Ordered List -->
-  <ol>
-    <li>Numbering list 1</li>
-    <li>Numbering list 2</li>
-    <li>Numbering list 3</li>
-  </ol>
-  <!-- List lainnya -->
-  <dl>Definition List
-    <dt>Terminology List</dt>
-    <dd>Description List</dd>
-  </dl>
+      <tbody>
+        <tr>
+          <!-- table row baris 1 -->
+          <th>Baris 1</th> <!-- table head kiri 1 -->
+          <td>Baris 1, Kolom 1</td> <!-- table data -->
+          <td>Baris 1, Kolom 2</td> <!-- table data -->
+        </tr>
+        <tr>
+          <!-- table row baris 2 -->
+          <th>Baris 2</th> <!-- table head kiri 2 -->
+          <td>Baris 2, Kolom 1</td> <!-- table data -->
+          <td>Baris 2, Kolom 2</td> <!-- table data -->
+        </tr>
+      </tbody>
 
-  <!-- Tabel -->
-  <table border="1" cellspacing="0" cellpadding="5">
+    </table>
 
-    <thead>
-      <!-- table head -->
-      <tr>
-        <!-- table row head -->
-        <th>X</th> <!-- table head 0 -->
-        <th>Kolom 1</th> <!-- table head kolom 1 -->
-        <th>Kolom 2</th> <!-- table head kolom 2 -->
-      </tr>
-    </thead>
+    <!-- Form dan tag-tag di dalamnya -->
+    <form>
 
-    <tbody>
-      <tr>
-        <!-- table row baris 1 -->
-        <th>Baris 1</th> <!-- table head kiri 1 -->
-        <td>Baris 1, Kolom 1</td> <!-- table data -->
-        <td>Baris 1, Kolom 2</td> <!-- table data -->
-      </tr>
-      <tr>
-        <!-- table row baris 2 -->
-        <th>Baris 2</th> <!-- table head kiri 2 -->
-        <td>Baris 2, Kolom 1</td> <!-- table data -->
-        <td>Baris 2, Kolom 2</td> <!-- table data -->
-      </tr>
-    </tbody>
-  </table>
+      <label>Label :</label> <!-- untuk membuat label suatu input -->
+      <input> <!-- type = text, password, email, radio, checkbox, dll. -->
 
-  <!-- Form -->
-  <form>
-    <label>Label :</label> <!-- untuk membuat label suatu input -->
-    <input> <!-- type = text, password, email, radio, checkbox, dll. -->
+      <select>
+        <!-- drop down pilihan -->
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+      </select>
 
-    <select>
-      <!-- drop down pilihan -->
-      <option>Option 1</option>
-      <option>Option 2</option>
-      <option>Option 3</option>
-    </select>
+      <button>Button</button> <!-- type = submit, reset, button) -->
+      <textarea></textarea> <!-- input text yang lebih luas -->
+    
+    </form>
 
-    <button>Button</button> <!-- type = submit, reset, button) -->
-    <textarea></textarea> <!-- input text yang lebih luas -->
-  </form>
+    <!-- Object Multimedia -->
+    <object></object>
 
-  <!-- Script -->
-  <script></script>
+    <!-- Grouping Tag -->
+    <div></div> <!-- block grouping -->
+    <span></span> <!-- inline grouping -->
 
-  <!-- Object Multimedia -->
-  <object></object>
+    <!-- Script -->
+    <script></script>
 
-  <!-- Grouping Tag -->
-  <div></div> <!-- block grouping -->
-  <span></span> <!-- inline grouping -->
+    <!-- ini adalah komentar untuk satu baris -->
 
-  <!-- ini adalah tag komentar -->
+    <!-- ini adalah komentar atau catatan untuk lebih dari satu baris
 
-  <!--
-  Struktur Tag 
-  <namatag atribut="nilai">
+          Struktur Tag 
+          <namatag atribut="nilai">
+          (boleh memiliki lebih dari satu atribut)
 
-  Nama-nama Atribut :
-  - acceskey (bisa diakses dengan keyboard/shortcut)
-  - id (identitas tag - hanya 1 per tag)
-  - class (kelas tag - bisa banyak)
-  - dir (direction : arah tulisan)
-  - lang (bahasa)
-  - style (inline css)
-  - tabindex (urutan jika tekan tab dalam form)
-  - title (judul untuk elemen)
-  - dll.
+          Nama-nama Atribut Global :
+          - acceskey (bisa diakses dengan keyboard/shortcut)
+          - id (identitas tag - hanya 1 per tag)
+          - class (kelas tag - bisa banyak)
+          - dir (direction : arah tulisan)
+          - lang (bahasa)
+          - style (inline css)
+          - tabindex (urutan jika tekan tab dalam form)
+          - title (judul untuk elemen)
+          - dll.
 
-  Kunjungi www.w3school.com/Tags
-  -->
+          Kunjungi www.w3school.com/Tags
 
-</body>
+    -->
+
+  </body>
 
 </html>

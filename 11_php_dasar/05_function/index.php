@@ -14,37 +14,37 @@
 
 echo time(); // UNIX Timestamp / EPOCH time (jumlah detik yang telah berlalu sejak 1 Januari 1970)
 
-echo "<br>";
+  echo "<br>";
 
 // date() - untuk menampilkan tanggal dengan format tertentu (butuh minimal 1 parameter) 
 
 echo date("l, d F Y");
 
-echo "<br>";
+  echo "<br>";
 
 echo date("l", time() - 60 * 60 * 24 * 100); // seratus hari kebelakang dari hari ini
 
-echo "<br>";
+  echo "<br>";
 
 // mktime(jam,menit,detik,bulan,tanggal,tahun) - membuat sendiri detik waktu yang diinginkan
 
 echo mktime(0, 0, 0, 10, 7, 1989);
 
-echo "<br>";
+  echo "<br>";
 
 echo date("l", mktime(0, 0, 0, 10, 7, 1989));
 
-echo "<br>";
+  echo "<br>";
 
 // strtotime("tanggal") - menjadi jumlah detik yang telah berlalu
 
 echo strtotime("07 Oct 1989");
 
-echo "<br>";
+  echo "<br>";
 
 echo date("l", strtotime("07 Oct 1989"));
 
-echo "<hr>";
+  echo "<hr>";
 
 // STRING
 // strlen() - string length (menghitung panjang string)
@@ -71,13 +71,15 @@ function salam($waktu = "Datang", $nama = "Admin")
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <title>Function</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <title>Function</title>
+  </head>
 
-<body>
-  <h1><?= salam("Pagi", "Budi"); ?></h1>
-</body>
+  <body>
+
+    <h1><?= salam("Pagi", "Budi"); ?></h1>
+    
+  </body>
 
 </html>

@@ -1,43 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Angka</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Angka</title>
+  </head>
+  <body>
+    <p>Silakan lihat di Console</p>
 
-  <script>
-
-    //angka tanpa desimal (bilangan bulat)//
-    console.log(10);
-    console.log(2000);
-    console.log(123456);
-    console.log(999999999999999); // maksimal akurasi 15 digit //
-    console.log(9999999999999999); // hasilnya: 10000000000000000 //
-    //angka dengan desimal//
-    console.log(3.14); // koma ditulis titik //
-    console.log(0.5);
-    console.log(100.00);
-    console.log(0.3+0.7);
-    console.log(0.2+0.1); // hasilnya: 0.30000000000000004 (hati-hati menjumlahkan bilangan positif) //
-    //eksponen//
-    console.log(123e5); // hasilnya: 12300000 // 
-    console.log(123e-5); // hasilnya: 0.00123 //
-    //bilangan negatif//
-    //1 bit untuk tanda (sign), 11 bit untuk eksponen, 52 bit untuk angka sebenarnya//
-    console.log(-25);
-    console.log(-3.14);
-    //jangan mengawali angka dengan 0 dan 0xFF//
-    console.log(022); // hasilnya: 18 (komputer menganggap ini bilangan oktal (0-7)) //
-    console.log(0xFF); // hasilnya: (komputer menganggap ini bilangan oktal (0-7)) //
-    //angka spesial (Infinity, - Infinity, NaN)//
-    console.log(2/0); // hasilnya: Infinity //
-    console.log(-2/0); // hasilnya: -Infinity //
-    console.log(0/0); // hasilnya: NaN (Not a Number) //
-    console.log(100/"apel"); // angka dibagi string hasilnya: NaN //
-    console.log(100/"10"); // angka dibagi angka dalam string hasilnya: 10 (string tetap diproses sebagai angka) //
- 
-  </script>
-
-</body>
+    <script>
+      //angka tanpa desimal (bilangan bulat)//
+      console.log(10);
+      console.log(2000);
+      console.log(123456);
+      console.log(999999999999999); // maksimal akurasi 15 digit //
+      console.log(9999999999999999); // hasilnya: 10000000000000000 //
+      //angka dengan desimal//
+      console.log(3.14); // koma ditulis titik //
+      console.log(0.5);
+      console.log(100.0);
+      console.log(0.3 + 0.7);
+      console.log(0.2 + 0.1); // hasilnya: 0.30000000000000004 (hati-hati menjumlahkan bilangan positif) //
+      //eksponen//
+      console.log(123e5); // hasilnya: 12300000 //
+      console.log(123e-5); // hasilnya: 0.00123 //
+      //bilangan negatif//
+      //1 bit untuk tanda (sign), 11 bit untuk eksponen, 52 bit untuk angka sebenarnya//
+      console.log(-25);
+      console.log(-3.14);
+      //jangan mengawali angka dengan 0 dan 0xFF//
+      console.log(022); // hasilnya: 18 (komputer menganggap ini bilangan oktal (0-7)) //
+      console.log(0xff); // hasilnya: (komputer menganggap ini bilangan oktal (0-7)) //
+      //angka spesial (Infinity, - Infinity, NaN)//
+      console.log(2 / 0); // hasilnya: Infinity //
+      console.log(-2 / 0); // hasilnya: -Infinity //
+      console.log(0 / 0); // hasilnya: NaN (Not a Number) //
+      console.log(100 / "apel"); // angka dibagi string hasilnya: NaN //
+      console.log(100 / "10"); // angka dibagi angka dalam string hasilnya: 10 (string tetap diproses sebagai angka) //
+    </script>
+  </body>
 </html>

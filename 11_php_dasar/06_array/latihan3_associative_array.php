@@ -70,24 +70,25 @@ $mahasiswa = [
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Associative Array</title>
-</head>
-<body>
-  
-  <h1>Data Karyawan</h1>
-  
-  <?php foreach( $mahasiswa as $mhs ) : ?>
-  <ul>
-    <li><img src="img/<?= $mhs["gambar"] ?>"></li>
-    <li>Nama : <?= $mhs["nama"]; ?></li>
-    <li>NIK : <?= $mhs["nik"]; ?></li>
-    <li>Usia : <?= $mhs["usia"]; ?></li>
-    <li>Email : <?= $mhs["email"]; ?></li>
-  </ul>
-  <?php endforeach; ?>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Associative Array</title>
+  </head>
+  <body>
+    
+    <h1>Data Karyawan</h1>
+    
+    <?php foreach( $mahasiswa as $mhs ) : ?>
+    <ul>
+      <li><img src="img/<?= $mhs["gambar"] ?>"></li>
+      <li>Nama : <?= $mhs["nama"]; ?></li>
+      <li>NIK : <?= $mhs["nik"]; ?></li>
+      <li>Usia : <?= $mhs["usia"]; ?></li>
+      <li>Email : <?= $mhs["email"]; ?></li>
+    </ul>
+    <?php endforeach; ?>
+    
+  </body>
 </html>
 
 <!--

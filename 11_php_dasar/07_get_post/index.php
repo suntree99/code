@@ -1,17 +1,12 @@
-<a href="latihan1_get.php">Latihan 1 - Get</a>
-<br>
-<a href="latihan2_get.php">Latihan 2 - Get (Redirect ke Latihan 1 - Get)</a>
-<br>
-<a href="latihan3_get_form.php">Latihan 3 - Get - Form</a>
-<br>
-<a href="latihan4_post_form.php">Latihan 4 - Post - Form</a>
-<br>
-<a href="latihan5_post.php">Latihan 5 - Post (Redirect ke Latihan 4 - Post)</a>
-<br>
+<title>GET & POST</title>
+
+<a href="latihan1_get_link1.php">Latihan 1 - Get - Link1</a><br>
+<a href="latihan2_get_link2.php">Latihan 2 - Get - Link2 (Redirect ke Latihan 1 - Get - Link1)</a><br>
+<a href="latihan3_get_form.php">Latihan 3 - Get - Form</a><br>
+<a href="latihan4_post_form1.php">Latihan 4 - Post - Form1</a><br>
+<a href="latihan5_post_form2.php">Latihan 5 - Post - Form2 (Redirect ke Latihan 4 - Post - Form1)</a><br>
 <a href="login/login.php">Latihan 6 - Halaman Login</a>
 <hr>
-
-<title>GET & POST</title>
 
 <?php 
 
@@ -24,10 +19,10 @@ function tampilX() {
   echo $x;
 }
 
-tampilX();
+tampilX(); // menjalankan fungsi tampilX()
 
 // SUPERGLOBAL
-// variabel global milik php
+// merupakan variabel global milik php
 // merupakan array asosiatif
 // - $_GET
 // - $_POST

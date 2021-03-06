@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>String</title>
-</head>
-<body>
-  
-  <script>
+  <head>
+    <meta charset="UTF-8" />
+    <title>String</title>
+  </head>
+  <body>
+    <p>Silakan lihat di Console</p>
 
-    console.log("Budi");
-    console.log('Darmawan');
-    console.log("Hari ini adalah hari Jum'at");
-    console.log('Kami akan mengadakan "Gerakan Pungut Sampah"');
-    console.log('"Gerakan Pungut Sampah" akan dilaksanakan  hari Jum\'at'); // menggunakan escape character ( \' atau \" ) 
-    console.log("\"Gerakan Pungut Sampah\" akan dilaksanakan  hari Jum\'at"); // menggunakan escape character ( \' atau \" ) 
-    // escape character pada string:
-    // \0 menampilkan NULL
-    // \' menampilkan '
-    // \" menampilkan "
-    // \\ menampilkan \
-    // \n menghasilkan new line atau garis baru (enter)
-    // \t menghasilkan tabulasi
-    // \b menghasilkan box character
-    // \uXXXX untuk menambahkan simbol unicode, seperti:
-    // - \u00A9 menghasilkan simbol copyright - (C)
-    // - \u00AE menghasilkan simbol registered - (R)
-    // - \u00B1 menghasilkan simbol plus minus
-    // - \u00B5 menghasilkan simbol miu
-    // - \u2122 menghasilkan simbol trade mark - TM
-    // - dll.
-    console.log("Hari ini adalah hari\nJum'at");
-    console.log("Hari ini adalah hari\tJum'at");
-    console.log("Hari ini adalah hari\bJum'at");
-    console.log("\u00A9");
-    console.log("\u2122");
-    console.log("Budi Darmawan".length); // 13, menghitung jumlah karakter string termasuk karakter spasi
-    var nama = "Budi Darmawan";
-    console.log(nama.length);
-    // operatir konkatenasi ( + )
-    console.log("Budi" + "Darmawan");
-    console.log("Budi" + " " + "Darmawan");
-    // operator perbandingan
-    console.log("Budi Darmawawn" == 'budi darmawan'); // false, case sensitif
-
-  </script>
-</body>
+    <script>
+      console.log("Budi");
+      console.log("Darmawan");
+      console.log("Hari ini adalah hari Jum'at");
+      console.log('Kami akan mengadakan "Gerakan Pungut Sampah"');
+      console.log('"Gerakan Pungut Sampah" akan dilaksanakan  hari Jum\'at'); // menggunakan escape character ( \' atau \" )
+      console.log('"Gerakan Pungut Sampah" akan dilaksanakan  hari Jum\'at'); // menggunakan escape character ( \' atau \" )
+      // escape character pada string:
+      // \0 menampilkan NULL
+      // \' menampilkan '
+      // \" menampilkan "
+      // \\ menampilkan \
+      // \n menghasilkan new line atau garis baru (enter)
+      // \t menghasilkan tabulasi
+      // \b menghasilkan box character
+      // \uXXXX untuk menambahkan simbol unicode, seperti:
+      // - \u00A9 menghasilkan simbol copyright - (C)
+      // - \u00AE menghasilkan simbol registered - (R)
+      // - \u00B1 menghasilkan simbol plus minus
+      // - \u00B5 menghasilkan simbol miu
+      // - \u2122 menghasilkan simbol trade mark - TM
+      // - dll.
+      console.log("Hari ini adalah hari\nJum'at");
+      console.log("Hari ini adalah hari\tJum'at");
+      console.log("Hari ini adalah hari\bJum'at");
+      console.log("\u00A9");
+      console.log("\u2122");
+      console.log("Budi Darmawan".length); // 13, menghitung jumlah karakter string termasuk karakter spasi
+      var nama = "Budi Darmawan";
+      console.log(nama.length);
+      // operatir konkatenasi ( + )
+      console.log("Budi" + "Darmawan");
+      console.log("Budi" + " " + "Darmawan");
+      // operator perbandingan
+      console.log("Budi Darmawawn" == "budi darmawan"); // false, case sensitif
+    </script>
+  </body>
 </html>

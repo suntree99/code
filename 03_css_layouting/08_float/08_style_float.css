@@ -1,5 +1,5 @@
 /*
-float :
+float (mengambang, keluar dari normal flow):
 - none; (default)
 - left;
 - right;
@@ -31,15 +31,16 @@ float :
 }
 
 /*
-- text wrapping
+- text wrapping, text berada di sekitar element lain (ex. img)
 */
 
 img {
   float: left;
+  margin: 5px;
 }
 
 /*
-- image galerry
+- image galery
 */
 
 .kotak {
@@ -83,8 +84,11 @@ img {
 }
 
 /*
+pada contoh di atas, 3 contoh terakhir containernya kolaps/runtuh,
+hal ini akan diatasi pada latihan berikutnya.
+
 cara menghentikan/membersihkan float yang kolaps:
 - menggunakan properti overflow
-- menggunakan <div> kosong
+- menggunakan properti clear melalui <div> kosong
 - menggunakan teknk micro clearfix
 */

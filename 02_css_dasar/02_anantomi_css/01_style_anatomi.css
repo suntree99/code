@@ -1,9 +1,16 @@
-/* Struktur Syntax 
+/* Struktur Syntax CSS
 
-selector { property: value; }
+   selector { property: value; }
 
-Ada 350++ properti pada CSS, Kunjungi
-https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
-https://css-tricks.com/almanac;
+   selector {
+      property1: value1;
+      property2: value2;
+      property3: value3;
+      property4: value4;
+   }
+
+   Ada 350++ properti pada CSS, Kunjungi
+   https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+   https://css-tricks.com/almanac;
 
 */

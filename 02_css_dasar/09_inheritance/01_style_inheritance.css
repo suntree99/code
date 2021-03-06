@@ -17,6 +17,9 @@ body {
   color: darkgrey;
 }
 
-/* secara default warna pada elemen link tidak terwarisi parent-nya, agar terwarisi maka gunakan nilai inherit */
+/*
+  secara default warna pada elemen 'link' tidak terwarisi parent-nya,
+  agar terwarisi maka gunakan nilai inherit.
+*/
 
 a { color: inherit; }

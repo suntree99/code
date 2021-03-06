@@ -2,19 +2,19 @@
 
 <?php // Tag PHP ini harus dibuat sebelum menulis sintaks PHP
 
-// ini adalah komentar, untuk satu baris
-/*
-ini adalah komentar,
-untuk satu blok
-*/
+  // ini adalah komentar, untuk satu baris
+  /*
+  ini adalah komentar,
+  untuk satu blok
+  */
 
-// Pertemuan 2 - PHP Dasar
-// Sintaks PHP
+  // Pertemuan 2 - PHP Dasar
+  // Sintaks PHP
 
-// Standar Output
-// - echo, print (untuk mencetak tulisan, isi variabel, dll.)
-// - print_r() (untuk mencetak array - juga untuk debuging)
-// - var_dump() (untuk melihat isi dari variabel - untuk debuging)
+  // Standar Output
+  // - echo, print (untuk mencetak tulisan, isi variabel, dll.)
+  // - print_r() (untuk mencetak array - juga untuk debuging)
+  // - var_dump() (untuk melihat isi dari variabel - untuk debuging)
 
   echo "Budi Darmawan"; echo "<br>";
   print 123; print "<br>";
@@ -26,12 +26,12 @@ untuk satu blok
 <!-- Penulisan Sintaks PHP : -->
 
 <!-- 1. PHP di dalam HTML -->
-  <h1>Halo, Selamat Datang <?php echo "Budi"; ?></h1> 
+<h1>Halo, Selamat Datang <?php echo "Budi"; ?></h1> 
 
 <!-- 2. HTML di dalam PHP -->
-  <?php 
-    echo "<h1>Halo, Selamat Datang Darmawan</h1>" 
-  ?>
+<?php 
+  echo "<h1>Halo, Selamat Datang Darmawan</h1>" 
+?>
 
 <!-- Variabel dan Tipe Data -->
 <!-- Variabel -->
@@ -39,16 +39,17 @@ untuk satu blok
   // variabel diawali dolar ($), tidak boleh diawali angka, tidak boleh ada spasi
   $nama1 = "Budi Darmawan";
 
-  echo "Halo, nama saya $nama1 ";
+  echo "Halo, nama saya $nama1";
   
     echo "<br><br>";
 
-  echo 'Halo, nama saya $nama1 '; // kutip satu tidak sensitif terhadap variabel
+  echo 'Halo, nama saya $nama1'; // kutip satu tidak sensitif terhadap variabel
 
 ?>
-  <!-- pemanggilan variabel -->
-  <h1>Halo, Selamat Datang <?php echo $nama1; ?></h1> 
-  <p><?php echo "Ini adalah paragraf" ?></p>
+
+<!-- pemanggilan variabel -->
+<h1>Halo, Selamat Datang <?php echo $nama1; ?></h1> 
+<p><?php echo "Ini adalah paragraf" ?></p>
 
 <?php 
 // Operator
@@ -85,7 +86,7 @@ untuk satu blok
 
     echo "<br><br>";
 
-// Perbandingan ( <, >, <=, >=, == ) - mengecek nilai
+// Perbandingan ( <, >, <=, >=, ==, != ) - mengecek nilai
 
   var_dump( 1 == "1" );
 

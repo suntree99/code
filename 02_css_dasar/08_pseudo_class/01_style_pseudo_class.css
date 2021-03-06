@@ -1,10 +1,10 @@
 /* Disalin dari codepen (https://codepen.io/suntree/pen/jOEdLZK) */
 
 /*
-:link (style default pada link yang tidak ditulispun tidak apa-apa)
-:hover (style yang bekerja saat pointer di atas elemen)
-:active (style yang bekerja saat elemen di klik)
-:visited (style yang bekerja setelah elemen di klik )
+  :link (style default pada link yang tidak ditulispun tidak apa-apa)
+  :hover (style yang bekerja saat pointer di atas elemen)
+  :active (style yang bekerja saat elemen di klik)
+  :visited (style yang bekerja setelah elemen di klik )
 */
 
 .hello:link {
@@ -26,9 +26,9 @@
 }
 
 /*
-:firstchild (memilih elemen-anak pertama dari elemen-parent pembungkusnya)
-:last-child (memilih elemen-anak terakhir dari elemen-parent pembungkusnya)
-:nth-child (memilih elemen-anak ke-n dari elemen-parent pembungkusnya, (1),(2),(2n),(3n+2),(4n-1), atau (even) & (odd) )
+  :firstchild (memilih elemen-anak pertama dari elemen-parent pembungkusnya)
+  :last-child (memilih elemen-anak terakhir dari elemen-parent pembungkusnya)
+  :nth-child (memilih elemen-anak ke-n dari elemen-parent pembungkusnya, (1),(2),(2n),(3n+2),(4n-1), atau (even) & (odd) )
 */
 
 li:nth-child(odd) a {
@@ -40,8 +40,8 @@ li:nth-child(even) a:hover {
 }
 
 /*
-:first-of-type (memilih elemen pertama pada suatu jenis/tipe tag)
-:last-of-type (memilih elemen terakhir pada suatu jenis/tipe tag)
+  :first-of-type (memilih elemen pertama pada suatu jenis/tipe tag)
+  :last-of-type (memilih elemen terakhir pada suatu jenis/tipe tag)
 */
 
 p:last-of-type{

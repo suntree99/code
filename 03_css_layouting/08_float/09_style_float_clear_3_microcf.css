@@ -42,8 +42,8 @@ float :
 
 /*
 cara menghentikan/membersihkan float yang kolaps:
-- menggunakan teknk micro clearfix
-dengan membuat class cf (contoh) pada elemen
+- menggunakan teknik micro clearfix
+dengan membuat class cf (contoh) pada elemen yang kolaps
 */
 
 /**

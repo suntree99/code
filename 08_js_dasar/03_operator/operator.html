@@ -1,91 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Operator</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Operator</title>
+  </head>
+  <body>
+    <p>Silakan lihat di Console</p>
 
-  <script>
+    <script>
+      //aritmatika//
+      console.log(5 + 10);
+      console.log(10 % 5); // % adalah operator sisa bagi
+      console.log(10 % 3);
+      console.log(1 + 2 * 3 - 4); // Urutan KuKaBaTaKu - Kurung Kali Bagi Tambah Kurang
 
-    //aritmatika//
-    console.log(5+10);    
-    console.log(10%5); // % adalah operator sisa bagi
-    console.log(10%3);    
-    console.log(1+2*3-4); // Urutan KuKaBaTaKu - Kurung Kali Bagi Tambah Kurang
+      //penugasan//
+      var x;
+      x = 10;
+      console.log(x); // menampilkan nilai x yaitu 10
+      x = 200;
+      console.log(x); // menampilan nilai x terbaru yaitu 200
 
-    //penugasan//
-    var x;
-    x = 10;
-    console.log(x); // menampilkan nilai x yaitu 10
-    x = 200;
-    console.log(x); // menampilan nilai x terbaru yaitu 200   
-    
-    // x += y sama dengan x = x + y
-    // x -= y sama dengan x = x - y
-    // x *= y sama dengan x = x * y
-    // x /= y sama dengan x = x / y
-    // x %= y sama dengan x = x % y
-    x = 10;
-    x += 5;
-    console.log(x); // x += 5 adalah x = 10 + 5 menghasilkan nilai x baru //  
+      // x += y sama dengan x = x + y
+      // x -= y sama dengan x = x - y
+      // x *= y sama dengan x = x * y
+      // x /= y sama dengan x = x / y
+      // x %= y sama dengan x = x % y
+      x = 10;
+      x += 5;
+      console.log(x); // x += 5 adalah x = 10 + 5 menghasilkan nilai x baru //
 
-    //operator perbandingan//
-    // ==  adalah : sama dengan
-    // !=  adalah : tidak sama dengan
-    // === adalah : strict sama dengan
-    // !== adalah : strict tidak sama dengan
-    // >   adalah : lebih besar dari
-    // <   adalah : lebih kecil dari
-    // >=  adalah : lebih besar sama dengan
-    // <=  adalah : lebih kecil sama dengan
-    //akan menghasilkan nilain boleh yaitu true atau false
-    console.log(10==10); // true   
-    console.log(10==15); // false
-    console.log(10!=10); // false
-    console.log(10!=15); // true
-    console.log(10=="10"); // true, hanya membandingakn isinya, tidak membandingkan tipe data   
-    console.log(10==="10"); // false, membandingkan sampai pada tipe datanya (operator identitas)
+      //operator perbandingan//
+      // ==  adalah : sama dengan
+      // !=  adalah : tidak sama dengan
+      // === adalah : strict sama dengan
+      // !== adalah : strict tidak sama dengan
+      // >   adalah : lebih besar dari
+      // <   adalah : lebih kecil dari
+      // >=  adalah : lebih besar sama dengan
+      // <=  adalah : lebih kecil sama dengan
+      //akan menghasilkan nilain boleh yaitu true atau false
+      console.log(10 == 10); // true
+      console.log(10 == 15); // false
+      console.log(10 != 10); // false
+      console.log(10 != 15); // true
+      console.log(10 == "10"); // true, hanya membandingakn isinya, tidak membandingkan tipe data
+      console.log(10 === "10"); // false, membandingkan sampai pada tipe datanya (operator identitas)
 
-    //operator logika and (&&), or (||), dan not (!)
-    x = 5;
-    console.log(x%2==0); // false
-    x = 12;   
-    console.log(x%2==0); // true    
-    console.log(x%2==0 && x<10); // false
-    x = 8;    
-    console.log(x%2==0 && x<10); // true 
-    x = 12;   
-    console.log(x%2==0 || x<10); // true
-    x = 10;   
-    console.log(x<20); // true    
-    console.log(!(x<20)); // false
+      //operator logika and (&&), or (||), dan not (!)
+      x = 5;
+      console.log(x % 2 == 0); // false
+      x = 12;
+      console.log(x % 2 == 0); // true
+      console.log(x % 2 == 0 && x < 10); // false
+      x = 8;
+      console.log(x % 2 == 0 && x < 10); // true
+      x = 12;
+      console.log(x % 2 == 0 || x < 10); // true
+      x = 10;
+      console.log(x < 20); // true
+      console.log(!(x < 20)); // false
 
-    //operator string
-    var a;
-    var b;
-    a = "apple";
-    b = "pen"
-    console.log(a + b); // "apple"+"pen"="applepen"   
-    console.log(a + " " + b); // "apple"+"pen"="applepen"  
-    console.log(10 + "10"); // "1010"
-    console.log("10" + 10); // "1010" 
-    console.log(10 + 10 + "10"); // "2010" 
-    console.log("10" + 10 + 10); //"101010" 
+      //operator string
+      var a;
+      var b;
+      a = "apple";
+      b = "pen";
+      console.log(a + b); // "apple"+"pen"="applepen"
+      console.log(a + " " + b); // "apple"+"pen"="applepen"
+      console.log(10 + "10"); // "1010"
+      console.log("10" + 10); // "1010"
+      console.log(10 + 10 + "10"); // "2010"
+      console.log("10" + 10 + 10); //"101010"
 
-    //typeof(operand)
-    console.log(typeof(10)); // number (tipe data dari 10)
-    console.log(typeof("10")); // string 
-    console.log(typeof(true)); // bolean
+      //typeof(operand)
+      console.log(typeof 10); // number (tipe data dari 10)
+      console.log(typeof "10"); // string
+      console.log(typeof true); // bolean
 
-    //kondisional
-    // (kondisi) ? Benar : Salah
-    x = 2;
-    console.log((x % 2 == 0) ? "genap" : "ganjil");
-     
-  </script>
-
-</body>
+      //kondisional
+      // (kondisi) ? Benar : Salah
+      x = 2;
+      console.log(x % 2 == 0 ? "genap" : "ganjil");
+    </script>
+  </body>
 </html>
 
 <!-- 

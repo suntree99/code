@@ -1,12 +1,12 @@
-		body {
-			font-family: arial;
-		}
+body {
+	font-family: arial;
+}
 
-		h1 {
-			color: lightblue;
-		}
+h1 {
+	color: lightblue;
+}
 
-		p {
-			line-height: 1.6em;
-			color: grey;
-		}
+p {
+	line-height: 1.6em;
+	color: grey;
+}

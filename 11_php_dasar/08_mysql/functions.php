@@ -1,7 +1,7 @@
 <?php 
 
 // koneksi ke database | mysqli_connect("host", "username", "password", "nama_database")
-$connectDB = mysqli_connect("localhost", "root", "", "phpdasar");
+$connect = mysqli_connect('localhost', 'root', '', 'phpdasar');
 
 // function query - mempersingkat perintah query
 function query($query) {
