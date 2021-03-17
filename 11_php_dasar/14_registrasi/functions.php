@@ -1,6 +1,6 @@
 <?php 
 
-// koneksi ke database
+// settingan koneksi ke database
 $connectDB = mysqli_connect("localhost", "root", "", "phpdasar");
 
 // function query - mempersingkat perintah query

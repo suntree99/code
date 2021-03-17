@@ -8,6 +8,7 @@ $_SESSION=[];
 session_unset(); // mengosongkan session
 session_destroy(); // menghancurkan session
 
+// mengembalikan ke halaman login
 header("Location: 5_login.php");
 exit;
 

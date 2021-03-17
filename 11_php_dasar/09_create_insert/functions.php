@@ -1,6 +1,6 @@
 <?php 
 
-// koneksi ke database
+// settingan koneksi ke database
 $connectDB = mysqli_connect("localhost", "root", "", "phpdasar");
 
 // function query - mempersingkat perintah query
@@ -17,13 +17,15 @@ function query($query) {
 // function tambah
 function tambah($data) { // parameter $data disisi oleh $_POST dari form
   global $connectDB;
-  $nama = htmlspecialchars($data["nama"]); // htmlspecialchar() berfungsi agar syntax html yang dimasukan user tidak dieksekusi
+  $nama = htmlspecialchars($data["nama"]);
   $nik = htmlspecialchars($data["nik"]);
   $usia = htmlspecialchars($data["usia"]);
   $email = htmlspecialchars($data["email"]);
   $gambar = htmlspecialchars($data["gambar"]);
+  // htmlspecialchar() berfungsi agar syntax html yang dimasukan user tidak dieksekusi
 
-  // query insert data, kosongkan id karena disi otomatis, tambahkan kutip ('') pada setiap variabel karen type-nya string
+  // query insert data, kosongkan id karena disi otomatis
+  // tambahkan kutip ('') pada setiap variabel karen type-nya string
   $query = "INSERT INTO Karyawan VALUES
             ('', '$nama', '$nik', '$usia', '$email', '$gambar')";
   

@@ -1,6 +1,6 @@
 <?php 
 
-// koneksi ke database
+// settingan koneksi ke database
 $connectDB = mysqli_connect("localhost", "root", "", "phpdasar");
 
 // function query - mempersingkat perintah query
@@ -50,7 +50,8 @@ function ubah($data) { // parameter $data disisi oleh $_POST dari form
   $email = htmlspecialchars($data["email"]);
   $gambar = htmlspecialchars($data["gambar"]);
 
-  // query update data, tambahkan '' pada setiap variabel karen type-nya string, jangan lupa tambahkan kekhususan (WHERE)
+  // query update data, tambahkan '' pada setiap variabel karen type-nya string
+  // jangan lupa tambahkan kekhususan (WHERE)
   $query = "UPDATE Karyawan SET
             nama = '$nama',
             nik = '$nik',

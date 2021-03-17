@@ -1,6 +1,6 @@
 <?php 
 
-// menghubungkan dengan perintah dari file functions.php
+// menghubungkan code file functions.php ke dalam file ini
 require 'functions.php';
 
 // menangkap $_GET dari halaman index.php

@@ -37,6 +37,12 @@ if ( isset($_POST["submit"]) ) {
 <head>
   <meta charset="UTF-8">
   <title>Tambah Data Karyawan</title>
+  <style>
+        ul { list-style-type: none; }
+        li { margin-bottom: 5px;}
+        label { display: inline-block; width: 75px; }
+        button { margin-left: 78px;}
+    </style>
 </head>
 <body>
 
@@ -60,8 +66,9 @@ if ( isset($_POST["submit"]) ) {
         <label for="email">Email :</label>
         <input type="text" name="email" id="email">
       </li>
-      <li><label for="gambar">Gambar :</label>
-      <input type="file" name="gambar" id="gambar">
+      <li>
+        <label for="gambar">Gambar :</label>
+        <input type="file" name="gambar" id="gambar">
       </li>
       <li>
         <button type="submit" name="submit">

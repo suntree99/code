@@ -1,13 +1,15 @@
 <?php 
 
+// menjalankan session
 session_start();
 
+// mengembalikan ke halaman login jika belum berhasil login
 if ( !isset($_SESSION["login"]) ) {
   header("Location: 5_login.php");
   exit;
 }
 
-// menghubungkan dengan perintah dari file functions.php
+// menghubungkan code file functions.php ke dalam file ini
 require 'functions.php';
 
 // menangkap $_GET dari halaman index.php

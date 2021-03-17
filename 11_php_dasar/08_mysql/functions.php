@@ -1,7 +1,16 @@
 <?php 
 
-// koneksi ke database | mysqli_connect("host", "username", "password", "nama_database")
-$connect = mysqli_connect('localhost', 'root', '', 'phpdasar');
+// settingan koneksi ke database | mysqli_connect("nama_server", "username", "password", "nama_database")
+$connectDB = mysqli_connect("localhost", "root", "", "phpdasar");
+
+// penghentian pembacaan code jika koneksi gagal
+if (!$connectDB) {
+  // whatever processing you want to do upon error in connection
+  // like log error or send an email to admin
+  // I am just printing the error at the moment.
+  echo mysqli_connect_errno() . ":" . mysqli_connect_error();
+  exit;
+}
 
 // function query - mempersingkat perintah query
 function query($query) {
@@ -9,7 +18,7 @@ function query($query) {
   global $connectDB;
   // mengambil (query) data tabel
   $result = mysqli_query($connectDB, $query);
-  // membuat array untuk menyimpan isi tabel
+  // membuat array kosong untuk menyimpan isi tabel
   $rows = [];
   // mengambil data dalam tabel satu per satu disimpan ke dalam array
   while ( $adaData = mysqli_fetch_assoc($result) ) {

@@ -1,6 +1,6 @@
 <?php 
 
-// koneksi ke database
+// settingan koneksi ke database
 $connectDB = mysqli_connect("localhost", "root", "", "phpdasar");
 
 // function query - mempersingkat perintah query
@@ -79,7 +79,7 @@ function cari($keyword) { // parameter $keyword disisi oleh $_POST["keyword"] da
 }
 
 // LIKE digunakan agar pencarian dilakukan dengan kata yang mengandung keyword
-  // jika menggunakan sama dengan (=) maka keyword harus sama PERSIS dengan data yang dicari
+// jika menggunakan sama dengan (=) maka keyword harus sama PERSIS dengan data yang dicari
 // % berfungsi agar karakter apapun sebelum/setelah keyword tidak berpengaruh
 // tambahkan kutip ('') karena variabel harus berupa string
 

@@ -1,11 +1,14 @@
 <?php 
 
+// menjalankan session
 session_start();
 
+// menghapus session
 $_SESSION=[];
 session_unset();
 session_destroy();
 
+// menghabiskan cookie dengan mengurangi waktunya dengan cukup banyak
 setcookie('id', '', time()-3600);
 setcookie('key', '', time()-3600);
 
