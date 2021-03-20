@@ -1,13 +1,15 @@
 <?php 
 
+// -------------------------
 // menjalankan session
 session_start();
 
-// mengembalikan ke halaman login jika belum berhasil login
+// pengondisian jika belum berhasil login, misalnya mencoba akses melalui url
 if ( !isset($_SESSION["login"]) ) {
-  header("Location: 5_login.php");
+  header("Location: 5_login.php"); // mengembalikan ke halaman login
   exit;
 }
+// -------------------------
 
 // menghubungkan code file functions.php ke dalam file ini
 require 'functions.php';
@@ -28,7 +30,6 @@ if ( hapus($id) > 0 ) {
     alert('Data GAGAL dihapus');
     document.location.href = 'index.php';
   </script>";
-
 }
 
 ?>
