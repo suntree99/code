@@ -1,7 +1,7 @@
 <?php 
 
 // settingan koneksi ke database | mysqli_connect("hostname", "username", "password", "database")
-$connectDB = mysqli_connect("localhost", "root", "", "phpdasar");
+$connectDB = mysqli_connect("sql310.epizy.com", "epiz_26756019", "CIDzfqQnuqlsEN", "epiz_26756019_phpdasar");
 
 // menghentikan pembacaan code jika koneksi gagal
 if (!$connectDB) {

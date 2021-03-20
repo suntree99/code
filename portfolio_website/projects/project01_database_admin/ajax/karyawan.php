@@ -1,7 +1,7 @@
 <?php 
 
 // halaman tidur, ceritanya internetnya lemot 
-usleep(500000); // microsecond
+// usleep(500000); // microsecond
 
 // menghubungkan code file functions.php ke dalam file ini
 require '../functions.php';
