@@ -1,15 +1,21 @@
-NEW:
-Account:
-epiz_26756019
-CIDzfqQnuqlsEN
-dodolipet99
+[Infinityfree Account]
+- User Name : epiz_26756019
+- Password  : CIDzfqQnuqlsEN
+- dodolipet99
 
-MySQL:
-epiz_26756019
-CIDzfqQnuqlsEN
-sql310.epizy.com
-3306
-epiz_26756019_XXX
+[ FTP Account ]
+- Host Name : ftpepizy.com
+- User Name : epiz_26756019
+- Password  : CIDzfqQnuqlsEN
+- Port      : 21
+- ftpupload.net
 
-ftpupload.net
-21
+[MySQL]
+- Host Name : sql310.epizy.com
+- User Name : epiz_26756019
+- Password  : CIDzfqQnuqlsEN
+- POrt      : 3306
+- DB Name   : epiz_26756019_XXX
+
+// koneksi ke database
+$connectDB = mysqli_connect("sql310.epizy.com", "epiz_26756019", "CIDzfqQnuqlsEN", "epiz_26756019_phpdasar");

@@ -1,0 +1,27 @@
+Web Hosting - Server penyedia layanan hosting
+
+Web Hosting Gratis Terbatas (hanya menangani HTML + CSS + JS) 
+- Google Site
+- Github Pages
+- Firebase (lebih advance tapi tidak menangani PHP dan MySQL)
+- ...
+
+CMS (Content Management System - tidak fleksibel, harus menggunakan CMS milik mereka)
+- Wordpress.com
+- Blogger.com
+- Wix.com
+- ...
+
+Web Hosting Gratis
+- 000webhost.com
+- infinityfree.net
+- ...
+
+Domain
+Nama pengganti IP adress (angka semua) untuk mengakses server
+
+Domain Gratis
+- freenom.com
+- dot.tk
+- name.com
+- ...
