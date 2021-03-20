@@ -19,7 +19,6 @@ if ( hapus($id) > 0 ) {
     alert('Data GAGAL dihapus');
     document.location.href = 'index.php';
   </script>";
-
 }
 
 ?>

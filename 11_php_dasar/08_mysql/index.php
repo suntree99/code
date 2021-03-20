@@ -3,6 +3,7 @@
 // menghubungkan code file functions.php ke dalam file ini
 require 'functions.php';
 
+// melakukan query data
 $karyawan = query("SELECT * FROM karyawan");
 
 ?>
@@ -29,8 +30,10 @@ $karyawan = query("SELECT * FROM karyawan");
         <th>Email</th>
       </tr>
       
+      <!-- inisialisasi index -->
       <?php $i = 1; ?>
-      <?php foreach ( $karyawan as $row ) : ?>
+      <!-- mengambil setiap baris data sebagai $row dari $karyawan (data tabel dalam bentuk array) -->
+      <?php foreach ( $karyawan as $row ) : ?> 
 
       <tr>
         <td><?= $i; ?></td>
@@ -45,11 +48,12 @@ $karyawan = query("SELECT * FROM karyawan");
         <td><?= $row["email"]; ?></td>
       </tr>
       
+      <!-- increment index -->
       <?php $i++; ?>
+      <!-- mengakhiri foreach -->
       <?php endforeach; ?>
 
     </table>
 
   </body>
 </html>
-

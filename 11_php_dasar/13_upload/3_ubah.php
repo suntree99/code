@@ -3,17 +3,15 @@
 // menghubungkan code file functions.php ke dalam file ini
 require 'functions.php';
 
-// menambahkan element input untuk gambar lama dengan type="hidden" sebagai gambar default jika tidak diganti
-// menambahkan element gambar untuk menampilkan gambar
-
 // menangkap $_GET dari halaman index.php
 $id = $_GET["id"];
 
 // melakukan query data berdasarkan id
 $kry = query("SELECT * FROM Karyawan where id = $id")[0];
-// perlu ditambahkan [0] karena hasil query() saja adalah berupa array numerik [0] yang berisi array data satu row 
+// hasil query() saja adalah data satu row berupa array numerik [0] 
+// sehingga perlu ditambahkan [0] untuk mengakses isi data di dalamnya 
 
-// mengecek jika tombol submit sudah ditekan
+// pengondisian alert jika tombol submit ditekan
 if ( isset($_POST["submit"]) ) {
 
   // mengecek apakah data berhasil diubah atau tidak
@@ -30,7 +28,6 @@ if ( isset($_POST["submit"]) ) {
         document.location.href = 'index.php';
       </script>";
   }
-
 }
 
 ?>
@@ -41,20 +38,26 @@ if ( isset($_POST["submit"]) ) {
     <meta charset="UTF-8">
     <title>Ubah Data Karyawan</title>
     <style>
-          ul { list-style-type: none; }
-          li { margin-bottom: 5px;}
-          label { display: inline-block; width: 75px; }
-          img, #gambar, button { margin-left: 78px; }
+        ul { list-style-type: none; }
+        li { margin-bottom: 5px;}
+        label { display: inline-block; width: 75px; }
+        img, #gambar, button { margin-left: 78px; }
     </style>
   </head>
   <body>
 
     <h1>Ubah Data Karyawan</h1>
 
+    <!-- menambahkan attribute enctype (encoding type) pada form untuk menangani jenis data yang berbeda (file/gambar) -->
     <form action="" method="post" enctype="multipart/form-data">
+    <!-- input string akan ditangani oleh $_POST, sedangkan input file akan ditangani oleh $_FILES -->
 
+      <!-- menambahkan element input untuk id dengan type="hidden" agar tidak terlihat oleh user -->
       <input type="hidden" name="id" value="<?= $kry["id"]; ?>">
+      <!-- menambahkan element input untuk gambar lama dengan type="hidden" sebagai gambar default jika tidak diganti -->
       <input type="hidden" name="gambarLama" value="<?= $kry["gambar"]; ?>">
+
+      <!-- menambahkan attribute value pada setiap elemen input untuk menampilkan setiap nilai sebelumnya -->
       <ul>
         <li>
           <label for="nik">NIK :</label>
@@ -62,25 +65,22 @@ if ( isset($_POST["submit"]) ) {
         </li>
         <li>
           <label for="nama">Nama :</label>
-          <input type="text" name="nama" id="nama" value="<?= $kry["nama"]; ?>">
+          <input type="text" name="nama" id="nama" required value="<?= $kry["nama"]; ?>">
         </li>
         <li>
           <label for="usia">Usia :</label>
-          <input type="text" name="usia" id="usia" value="<?= $kry["usia"]; ?>">
+          <input type="text" name="usia" id="usia" required value="<?= $kry["usia"]; ?>">
         </li>
         <li>
           <label for="email">Email :</label>
-          <input type="text" name="email" id="email" value="<?= $kry["email"]; ?>">
+          <input type="email" name="email" id="email" required value="<?= $kry["email"]; ?>">
         </li>
         <li>
-          <label for="gambar">Gambar :</label>
-          <br>
-          <img src="img/<?= $kry["gambar"]; ?>" width="50">
-          <br>
-          <input type="file" name="gambar" id="gambar"; ?>
-          <br>
-          <br>
+          <label for="gambar">Gambar :</label><br>
+          <img src="img/<?= $kry["gambar"]; ?>" width="50"><br> <!-- menambahkan element gambar untuk menampilkan gambarLama -->
+          <input type="file" name="gambar" id="gambar" required><br> <!-- mengganti type input gambar menjadi "file" -->
         </li>
+        <br>
         <li>
           <button type="submit" name="submit">
             Ubah Data!
@@ -90,7 +90,7 @@ if ( isset($_POST["submit"]) ) {
 
     </form>
 
-    <a href="index.php">Kembali ke Halaman Data Karyawan</a>
+    <a href="index.php">Kembali ke Daftar Karyawan</a>
 
   </body>
 </html>

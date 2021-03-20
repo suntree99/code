@@ -1,24 +1,30 @@
 <?php 
 
-// settingan koneksi ke database | mysqli_connect("nama_server", "username", "password", "nama_database")
+// settingan koneksi ke database | mysqli_connect("hostname", "username", "password", "database")
 $connectDB = mysqli_connect("localhost", "root", "", "phpdasar");
 
-// ambil data dari tabel karyawan / query data karyawan
+// menghentikan pembacaan code jika koneksi gagal
+if (!$connectDB) {
+  // echo "Error Number : " . mysqli_connect_errno() . " | Description : " . mysqli_connect_error();
+  exit;
+}
+
+// (query) mengambil data tabel dari database dan menampungnya di variabel $result
 $result = mysqli_query($connectDB, "SELECT * FROM karyawan");
 
-// cara lama ini maksudnya tidak memisahkan index dan function dalam file terpisah
+// CARA LAMA INI MAKSUDNYA TIDAK MEMISAHKAN INDEX DAN FUNCTION DALAM FILE TERPISAH
 
 // menampilkan keterangan error jika tidak ada database yang dimaksud (karyawan)
   // if ( !$result ) {
   //   echo mysqli_error($connectDB);
   // }
 
-// untuk debuging - menampilkan semua data yang diminta dalam format debuging untuk pengecekan 
+// debuging data - menampilkan semua data yang diminta dalam format debuging untuk pengecekan 
   // while ( $kry = mysqli_fetch_assoc($result) ) {
   //   var_dump($kry);
   // }
 
-// beberapa cara mengambil (fetch) data dari object $result:
+// beberapa cara mengambil (fetch) data :
   // mysqli_fetch_row() - mengembalikan array numerik
   // mysqli_fetch_assoc() - mengembalikan array associative
   // mysqli_fetch_array() - mengembalikan array keduanya (numerik & associative) - data dobel
@@ -48,8 +54,10 @@ $result = mysqli_query($connectDB, "SELECT * FROM karyawan");
         <th>Email</th>
       </tr>
       
-    <?php $i = 1; ?>
-    <?php while ( $row = mysqli_fetch_assoc($result) ) : ?>
+      <!-- inisialisasi index -->
+      <?php $i = 1; ?>
+      <!-- mengambil setiap baris data sebagai $row dari $result menggunakan mysqli_fetch_assoc() -->
+      <?php while ( $row = mysqli_fetch_assoc($result) ) : ?>
 
       <tr>
         <td><?= $i; ?></td>
@@ -64,8 +72,10 @@ $result = mysqli_query($connectDB, "SELECT * FROM karyawan");
         <td><?= $row["email"]; ?></td>
       </tr>
       
-    <?php $i++; ?>
-    <?php endwhile; ?>
+      <!-- increment index -->
+      <?php $i++; ?>
+      <!-- mengakhiri foreach -->
+      <?php endwhile; ?>
 
     </table>
 

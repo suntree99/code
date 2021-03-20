@@ -3,10 +3,12 @@
 // menghubungkan code file functions.php ke dalam file ini
 require 'functions.php';
 
+// melakukan query data
 $karyawan = query("SELECT * FROM karyawan");
 
-// menjalankan function cari jika tombol cari diklik
+// pengondisian jika tombol cari ditekan
 if ( isset($_POST["cari"]) ) {
+  // eksekusi function cari
   $karyawan = cari($_POST["keyword"]);
 }
 
@@ -21,11 +23,17 @@ if ( isset($_POST["cari"]) ) {
   <body>
     
     <h1>Daftar Karyawan</h1>
+    <!-- menambahkan link 'Tambah Data Karyawan' ke halaman 1_tambah.php -->
     <a href="1_tambah.php">Tambah Data Karyawan</a>
     <br><br>
 
+    <!-- menambahkan form untuk search -->
+
     <form action="" method="post">
       <input type="text" name="keyword" size="40px" autofocus placeholder="masukkan keyword pencarian..." autocomplete="off">
+      <!-- autofocus berfungsi agar element tersebut langsung aktif saat halaman dibuka -->
+      <!-- placeholder berfungsi untuk menampilkan kata-kata contoh/perintah -->
+      <!-- autocomplete berfungsi untuk memberikan saran kata yang pernah dimasukkan -->
       <button type="submit" name="cari">Cari!</button>
       <br><br>
     </form>
@@ -42,13 +50,19 @@ if ( isset($_POST["cari"]) ) {
         <th>Email</th>
       </tr>
       
-      <?php $i = 1;  ?>
-      <?php foreach ( $karyawan as $row ) : ?>
+      <!-- inisialisasi index -->
+      <?php $i = 1; ?>
+      <!-- mengambil setiap baris data sebagai $row dari $karyawan (data tabel dalam bentuk array) -->
+      <?php foreach ( $karyawan as $row ) : ?> 
+
       <tr>
         <td><?= $i; ?></td>
         <td>
+          <!-- menambahkan link 'ubah' untuk berpindah ke halaman 3_ubah.php dan mengirimkan data 'id' menggunakan $_GET["id"] -->
           <a href="3_ubah.php?id=<?= $row["id"]; ?>">ubah</a> | 
-          <a href="2_hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('Yakin mau DIHAPUS?');">hapus</a>
+          <a href="2_hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('Apakah anda yakin data ini ingin DIHAPUS?');">hapus</a>
+          <!-- menambahkan link 'hapus' untuk berpindah ke halaman 2_hapus.php dan mengirimkan data 'id' menggunakan $_GET["id"] -->
+          <!-- menambahkan attribute onclick dengan function confirm untuk mengonfirmasi sebelum perintah dieksekusi -->
         </td>
         <td><img src="img/<?= $row["gambar"]; ?>" alt="<?= $row["nama"]; ?>" width="50px"></td>
         <td><?= $row["nik"]; ?></td>
@@ -56,9 +70,12 @@ if ( isset($_POST["cari"]) ) {
         <td><?= $row["usia"]; ?></td>
         <td><?= $row["email"]; ?></td>
       </tr>
-      <?php $i++; ?>
-      <?php endforeach; ?>
       
+      <!-- increment index -->
+      <?php $i++; ?>
+      <!-- mengakhiri foreach -->
+      <?php endforeach; ?>
+
     </table>
 
   </body>

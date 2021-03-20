@@ -3,7 +3,7 @@
 // menjalankan session
 session_start();
 
-// menghapus session
+// menghapus session "login"
 $_SESSION=[];
 session_unset(); // mengosongkan session
 session_destroy(); // menghancurkan session

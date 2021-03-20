@@ -1,39 +1,45 @@
 <?php
 
+// -------------------------
 // menjalankan session
 session_start();
 
-// Session adalah mekanisme penyimpanan informasi ke dalam variabel
-// agar bisa digunakan di LEBIH DARI SATU HALAMAN.
-// Session disimpan di SERVER
-
-// mengembalikan ke halaman index jika sudah berhasil login
+// pengondisian jika sudah berhasil login
 if ( isset($_SESSION["login"]) ) {
-  header("Location: index.php");
+  header("Location: index.php"); // berpindak ke halaman index
   exit;
 }
+// -------------------------
 
-// menghubungkan dengan perintah dari file functions.php
+// SESSION adalah mekanisme penyimpanan informasi ke dalam variabel superglobal $_SESSION
+// agar bisa digunakan di LEBIH DARI SATU HALAMAN, SESSION disimpan di dalam SERVER
+
+// menghubungkan code file functions.php ke dalam file ini
 require 'functions.php';
 
-// mengecek jika tombol login diklik
+// pengondisian jika tombol login diklik
 if ( isset($_POST["login"]) ) {
-
+  // menangkap username dan password yang diinput
   $username = $_POST["username"];
   $password = $_POST["password"];
-
+  
+  // melakukan queri dengan username yang diinput
   $result = mysqli_query($connectDB, "SELECT * FROM user WHERE username = '$username'");
 
-  if ( mysqli_num_rows($result) === 1 ) {
+  // pengondisian jika username ada di dalam database
+  if ( mysqli_num_rows($result) === 1 ) { // jumlah rows dalam database, nilai 1 berarti ada
   
+    // mengecek kecocokan password yang diinput ($password) dengan password di database ($row["password"])
     $row = mysqli_fetch_assoc($result);
-    if ( password_verify($password, $row["password"]) ) {
+    if ( password_verify($password, $row["password"]) ) { // jika cocok masuk ke halaman index.php
       
-      // mengeset SESSION
+      // -------------------------
+      // mengeset session dan menyimpannya ke dalam server
       $_SESSION["login"] = true;
+      // -------------------------
 
       header("Location: index.php");
-      exit;
+      exit; // keluar dari pembacaan kode, kode di bawah tidak dieksekusi
     }
   }
 
@@ -48,21 +54,21 @@ if ( isset($_POST["login"]) ) {
     <meta charset="UTF-8">
     <title>Halaman Login</title>
     <style>
-        ul { list-style-type: none; }
-        li { margin-bottom: 10px;}
-        label { display: inline-block; width: 75px;}
-        button { margin-left: 78px; margin-top: 10px;}
-      </style>
+      ul { list-style-type: none; }
+      li { margin-bottom: 10px;}
+      label { display: inline-block; width: 75px;}
+      button { margin-left: 78px; margin-top: 10px;}
+    </style>
   </head>
   <body>
     
     <h1>Halaman Login</h1>
     
-    <?php if ( isset($error) ) : ?>
+    <?php if ( isset($error) ) : ?> <!-- jika setelah tombol login diklik menghasilkan $error  -->
       <p style="color:red; font-style:italic">username / password salah</p>
     <?php endif; ?>
 
-    <form action="" method="post">
+    <form action="" method="post"> <!-- data $_POST dikirim ke halaman ini juga -->
 
       <ul>
         <li>
@@ -77,10 +83,10 @@ if ( isset($_POST["login"]) ) {
           <button type="submit" name="login">Login</button>
         </li>
       </ul>
-      
+
     </form>
 
     <p>Belum memiliki akun? registrasi <a href="4_registrasi.php">disini.</a></p>
-
+    
   </body>
 </html>

@@ -3,7 +3,7 @@
 // menghubungkan code file functions.php ke dalam file ini
 require 'functions.php';
 
-// mengecek jika tombol submit sudah ditekan
+// pengondisian alert jika tombol submit ditekan
 if ( isset($_POST["submit"]) ) {
 
   // mengecek apakah data berhasil ditambahkan atau tidak
@@ -20,7 +20,6 @@ if ( isset($_POST["submit"]) ) {
         document.location.href = 'index.php';
       </script>";
   }
-
 }
 
 ?>
@@ -50,19 +49,19 @@ if ( isset($_POST["submit"]) ) {
         </li>
         <li>
           <label for="nama">Nama :</label>
-          <input type="text" name="nama" id="nama">
+          <input type="text" name="nama" id="nama" required>
         </li>
         <li>
           <label for="usia">Usia :</label>
-          <input type="text" name="usia" id="usia">
+          <input type="text" name="usia" id="usia" required>
         </li>
         <li>
           <label for="email">Email :</label>
-          <input type="text" name="email" id="email">
+          <input type="email" name="email" id="email" required>
         </li>
         <li>
           <label for="gambar">Gambar :</label>
-          <input type="text" name="gambar" id="gambar">
+          <input type="text" name="gambar" id="gambar" required>
         </li>
         <br>
         <li>
@@ -74,7 +73,7 @@ if ( isset($_POST["submit"]) ) {
 
     </form>
 
-    <a href="index.php">Kembali ke Halaman Data Karyawan</a>
+    <a href="index.php">Kembali ke Daftar Karyawan</a>
 
   </body>
 </html>

@@ -3,12 +3,7 @@
 // menghubungkan code file functions.php ke dalam file ini
 require 'functions.php';
 
-// menambahkan attribute enctype pada form untuk menangani jenis data yang berbeda (file/gambar)
-// input string akan ditangani oleh $_POST
-// input file akan ditangani oleh $_FILES
-// mengganti type input gambar menjadi "file"
-
-// mengecek jika tombol submit sudah ditekan
+// pengondisian alert jika tombol submit ditekan
 if ( isset($_POST["submit"]) ) {
 
   // mengecek apakah data berhasil ditambahkan atau tidak
@@ -25,7 +20,6 @@ if ( isset($_POST["submit"]) ) {
         document.location.href = 'index.php';
       </script>";
   }
-
 }
 
 ?>
@@ -46,7 +40,10 @@ if ( isset($_POST["submit"]) ) {
 
     <h1>Tambah Data Karyawan</h1>
 
+    <!-- menambahkan attribute enctype (encoding type) pada form untuk menangani jenis data yang berbeda (file/gambar) -->
     <form action="" method="post" enctype="multipart/form-data">
+    <!-- input string akan ditangani oleh $_POST, sedangkan input file akan ditangani oleh $_FILES -->
+    
       <ul>
         <li>
           <label for="nik">NIK :</label>
@@ -54,19 +51,19 @@ if ( isset($_POST["submit"]) ) {
         </li>
         <li>
           <label for="nama">Nama :</label>
-          <input type="text" name="nama" id="nama">
+          <input type="text" name="nama" id="nama" required>
         </li>
         <li>
           <label for="usia">Usia :</label>
-          <input type="text" name="usia" id="usia">
+          <input type="text" name="usia" id="usia" required>
         </li>
         <li>
           <label for="email">Email :</label>
-          <input type="text" name="email" id="email">
+          <input type="email" name="email" id="email" required>
         </li>
         <li>
           <label for="gambar">Gambar :</label>
-          <input type="file" name="gambar" id="gambar">
+          <input type="file" name="gambar" id="gambar" required> <!-- mengganti type input gambar menjadi "file" -->
         </li>
         <br>
         <li>
@@ -78,7 +75,7 @@ if ( isset($_POST["submit"]) ) {
 
     </form>
 
-    <a href="index.php">Kembali ke Halaman Data Karyawan</a>
+    <a href="index.php">Kembali ke Daftar Karyawan</a>
 
   </body>
 </html>

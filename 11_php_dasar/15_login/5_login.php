@@ -1,9 +1,9 @@
 <?php 
 
-// menghubungkan dengan perintah dari file functions.php
+// menghubungkan code file functions.php ke dalam file ini
 require 'functions.php';
 
-// mengecek jika tombol login diklik
+// pengondisian jika tombol login diklik
 if ( isset($_POST["login"]) ) {
   // menangkap username dan password yang diinput
   $username = $_POST["username"];
@@ -12,14 +12,14 @@ if ( isset($_POST["login"]) ) {
   // melakukan queri dengan username yang diinput
   $result = mysqli_query($connectDB, "SELECT * FROM user WHERE username = '$username'");
 
-  // mengecekcek username di dalam database
+  // pengondisian jika username ada di dalam database
   if ( mysqli_num_rows($result) === 1 ) { // jumlah rows dalam database, nilai 1 berarti ada
   
-    // mengecek kecocokan password
+    // mengecek kecocokan password yang diinput ($password) dengan password di database ($row["password"])
     $row = mysqli_fetch_assoc($result);
-    if ( password_verify($password, $row["password"]) ) {
+    if ( password_verify($password, $row["password"]) ) { // jika cocok masuk ke halaman index.php
       header("Location: index.php");
-      exit;
+      exit; // keluar dari pembacaan kode, kode di bawah tidak dieksekusi
     }
   }
 
@@ -44,11 +44,11 @@ if ( isset($_POST["login"]) ) {
     
     <h1>Halaman Login</h1>
     
-    <?php if ( isset($error) ) : ?>
+    <?php if ( isset($error) ) : ?> <!-- jika setelah tombol login diklik menghasilkan $error  -->
       <p style="color:red; font-style:italic">username / password salah</p>
     <?php endif; ?>
 
-    <form action="" method="post">
+    <form action="" method="post"> <!-- data $_POST dikirim ke halaman ini juga -->
 
       <ul>
         <li>

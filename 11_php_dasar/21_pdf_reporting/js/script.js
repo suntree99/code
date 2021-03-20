@@ -1,25 +1,20 @@
-// memanggil JQuery(document)
-$(document).ready( function() {
+// memanggil JQuery(document) dengan tanda dollar ($) atau (JQuery) diikuti tanda kurung
+$(document).ready(function () {
+  // .ready akan mengeksekusi script di dalamnya seteleh dokumen selesai dibaca (ready)
 
-  // hilangkan tombol cari
-  $('#tombolCari').hide();
+  $("#tombolCari").hide(); // hilangkan tombol cari, untuk livesearching tidak diperlukan
 
   // event ketika keyword ditulis
-  $('#keyword').on('keyup', function() {
-    // munculkan icon loading
-    $('.loader').show(); // loading ditampilkan
+  $("#keyword").on("keyup", function () {
+    $(".loader").show(); // munculkan icon loader, hanya hiasan
 
-    // ajax menggunakan .load()
+    // memanggil ajax menggunakan .load() dari JQuery, kelemahan hanya bisa menggunakan GET tidak bisa POST
     // $('#container').load('ajax/karyawan.php?keyword=' + $("#keyword").val());
 
-    // ajax menggunakan $.get()
-    $.get('ajax/karyawan.php?keyword=' + $('#keyword').val(), function(data) {
-
-      $('#container').html(data); // mengisi #container dengan .html() -> seperti innerHTML
-      $('.loader').hide(); // loding dihilangkan
-
+    // memanggil ajax menggunakan $.get() dari JQuery
+    $.get("ajax/karyawan.php?keyword=" + $("#keyword").val(), function (data) {
+      $("#container").html(data); // mengisi #container dengan .html() -> seperti innerHTML
+      $(".loader").hide(); // loader dihilangkan
     });
-
   });
-
 });

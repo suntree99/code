@@ -3,8 +3,10 @@
 // menghubungkan code file functions.php ke dalam file ini
 require 'functions.php';
 
+// pengondisian jika tombol register ditekan
 if ( isset($_POST["register"]) ) {
 
+  // mengecek apakah registrasi berhasil dilakukan atau tidak
   if ( registrasi($_POST) > 0 ) {
     echo "<script>
           alert('User baru BERHASIL ditambahkan');
@@ -12,7 +14,6 @@ if ( isset($_POST["register"]) ) {
   } else {
     echo mysqli_error($connectDB);
   }
-
 }
 
 ?> 
@@ -54,6 +55,8 @@ if ( isset($_POST["register"]) ) {
       </ul>
     
     </form>
+
+    <a href="5_login.php">Kembali ke Halaman Login</a>
 
   </body>
 </html>  
