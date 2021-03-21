@@ -46,21 +46,49 @@ if ( isset($_POST["submit"]) ) {
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
     <title>Ubah Data Karyawan</title>
-    <style>
-        ul { list-style-type: none; }
-        li { margin-bottom: 5px;}
-        label { display: inline-block; width: 75px; }
-        img, #gambar, button { margin-left: 78px; }
-    </style>
+
+    <style>.form-ubah { width: 500px; } </style>
+
   </head>
   <body>
 
-    <h1>Ubah Data Karyawan</h1>
+    <!-- Awal Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary print-hilang"> <!-- menambahkan class "print-hilang" untuk style print -->
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Database Karyawan</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.php">Kembali ke Daftar Karyawan</a>
+            </li>
+          </ul>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="6_logout.php">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Akhir Navbar -->
+
+    <h1 class="text-center mt-5 mb-5">Ubah Data Karyawan</h1>
 
     <!-- menambahkan attribute enctype (encoding type) pada form untuk menangani jenis data yang berbeda (file/gambar) -->
-    <form action="" method="post" enctype="multipart/form-data">
+    <form class="m-auto" action="" method="post" enctype="multipart/form-data">
     <!-- input string akan ditangani oleh $_POST, sedangkan input file akan ditangani oleh $_FILES -->
 
       <!-- menambahkan element input untuk id dengan type="hidden" agar tidak terlihat oleh user -->
@@ -68,40 +96,41 @@ if ( isset($_POST["submit"]) ) {
       <!-- menambahkan element input untuk gambar lama dengan type="hidden" sebagai gambar default jika tidak diganti -->
       <input type="hidden" name="gambarLama" value="<?= $kry["gambar"]; ?>">
 
-      <!-- menambahkan attribute value pada setiap elemen input untuk menampilkan setiap nilai sebelumnya -->
-      <ul>
-        <li>
-          <label for="nik">NIK :</label>
-          <input type="text" name="nik" id="nik" required value="<?= $kry["nik"]; ?>">
-        </li>
-        <li>
-          <label for="nama">Nama :</label>
-          <input type="text" name="nama" id="nama" required value="<?= $kry["nama"]; ?>">
-        </li>
-        <li>
-          <label for="usia">Usia :</label>
-          <input type="text" name="usia" id="usia" required value="<?= $kry["usia"]; ?>">
-        </li>
-        <li>
-          <label for="email">Email :</label>
-          <input type="email" name="email" id="email" required value="<?= $kry["email"]; ?>">
-        </li>
-        <li>
-          <label for="gambar">Gambar :</label><br>
-          <img src="img/<?= $kry["gambar"]; ?>" width="50"><br> <!-- menambahkan element gambar untuk menampilkan gambarLama -->
-          <input type="file" name="gambar" id="gambar" required><br> <!-- mengganti type input gambar menjadi "file" -->
-        </li>
-        <br>
-        <li>
-          <button type="submit" name="submit">
-            Ubah Data!
-          </button>
-        </li>
-      </ul>
-
+      <div class="container">
+        <div class="row m-auto form-ubah">
+          <div class="col">
+            <!-- menambahkan attribute value pada setiap elemen input untuk menampilkan setiap nilai sebelumnya -->
+            <div>
+              <label class="form-label" for="nik">NIK :</label>
+              <input class="form-control mb-3" type="text" name="nik" id="nik" required value="<?= $kry["nik"]; ?>">
+            </div>
+            <div>
+              <label class="form-label" for="nama">Nama :</label>
+              <input class="form-control mb-3" type="text" name="nama" id="nama" required value="<?= $kry["nama"]; ?>">
+            </div>
+            <div>
+              <label class="form-label" for="usia">Usia :</label>
+              <input class="form-control mb-3" type="text" name="usia" id="usia" required value="<?= $kry["usia"]; ?>">
+            </div>
+            <div>
+              <label class="form-label" for="email">Email :</label>
+              <input class="form-control mb-3" type="email" name="email" id="email" required value="<?= $kry["email"]; ?>">
+            </div>
+            <div>
+              <label class="form-label me-5" for="gambar">Gambar :</label>
+              <img class="mb-3" src="img/<?= $kry["gambar"]; ?>" width="100"><br> <!-- menambahkan element gambar untuk menampilkan gambarLama -->
+              <input class="form-control mb-3" type="file" name="gambar" id="gambar"><br> <!-- mengganti type input gambar menjadi "file" -->
+            </div>
+            <div>
+              <button class="btn btn-primary m-auto mt-3" type="submit" name="submit">Ubah Data!</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </form>
 
-    <a href="index.php">Kembali ke Daftar Karyawan</a>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
   </body>
 </html>

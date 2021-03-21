@@ -1,0 +1,25 @@
+/* style untuk fitur print dari browser */
+@media print {
+  .print-hilang {
+    display: none;
+  }
+
+  tr {
+    border-bottom: #eee solid 1px;
+  }
+}
+
+/* style element */
+.loader {
+  color: white;
+  z-index: -1;
+  display: none;
+}
+
+.cari {
+  width: 676px;
+}
+
+tr:nth-child(odd) {
+  background-color: #eee;
+}
