@@ -18,7 +18,7 @@ require 'functions.php';
 $id = $_GET["id"];
 
 // melakukan query data berdasarkan id
-$kry = query("SELECT * FROM Karyawan where id = $id")[0];
+$kry = query("SELECT * FROM karyawan where id = $id")[0];
 // hasil query() saja adalah data satu row berupa array numerik [0] 
 // sehingga perlu ditambahkan [0] untuk mengakses isi data di dalamnya 
 

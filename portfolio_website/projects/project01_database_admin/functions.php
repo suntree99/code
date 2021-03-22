@@ -45,7 +45,7 @@ function tambah($data) { // parameter $data disisi oleh $_POST dari form
   
   // query insert data, kosongkan id karena disi otomatis ('')
   // tambahkan kutip (') pada setiap variabel karena type-nya string
-  $query = "INSERT INTO Karyawan VALUES
+  $query = "INSERT INTO karyawan VALUES
             ('', '$nama', '$nik', '$usia', '$email', '$gambar')";
   
   // mengeksekusi query tambah data
@@ -142,14 +142,14 @@ function ubah($data) {
 
   // query update data, tambahkan kutip (') pada setiap variabel karena type-nya string
   // jangan lupa tambahkan kekhususan (WHERE) agar tidak terganti semua
-  $query = "UPDATE Karyawan SET
+  $query = "UPDATE karyawan SET
             nama = '$nama',
             nik = '$nik',
             usia = '$usia',
             email = '$email',
             gambar = '$gambar'
             WHERE
-            id = $id ";
+            id = $id";
 
   // mengeksekusi query update data
   mysqli_query($connectDB, $query);
