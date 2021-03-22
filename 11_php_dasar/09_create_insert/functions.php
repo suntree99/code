@@ -36,7 +36,7 @@ function tambah($data) { // parameter $data disisi oleh $_POST dari form
 
   // query insert data, kosongkan id karena disi otomatis ('')
   // tambahkan kutip (') pada setiap variabel karena type-nya string
-  $query = "INSERT INTO Karyawan VALUES
+  $query = "INSERT INTO karyawan VALUES
             ('', '$nama', '$nik', '$usia', '$email', '$gambar')";
   
   // mengeksekusi query
