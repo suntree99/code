@@ -1,0 +1,14 @@
+Public API / Open API
+Sebuah API (REST API) yang dapat diakses secara publik,
+yang didalamnya tersedia aturan untuk developer agar dapat mengakses data.
+
+- https://any-api.com
+- https://github.com/toddmotto/public-apis
+- https://github.com/farizdotid (Indonesia)
+
+Otentikasi (Auth)
+- Tanpa otentikasi
+- Key / Token (batas akses)
+- OAuth (masuk ke aplikasi lain menggunakan login google/facebook)
+
+Perhatikan CORS
