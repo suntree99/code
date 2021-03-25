@@ -1,0 +1,13 @@
+Same-origin Policy
+- Kebijakan browser untuk mengakses dan menampilkan data / script / document dari tempat lain di luar domain-nya
+- Membuat kita tidak bisa mengakses data (.json) dari luar domain/website kita - diblok oleh CORS
+
+CORS (Cross Origin Resource Sharing)
+- Mekanisme yang membuat kita adapat mengakses resource (data, script, document) dari domain lain
+- Caranya adalah dengan membuat server memperbolehkan adanya akses dari luar domain
+- Dengan memodifikasi Access-Control-Allow-Origin
+- Melalui file .htaccess 
+
+<IfModule mod_headers.c>
+   Header set Access-Control-Allow-Origin "*"
+</IfModule>

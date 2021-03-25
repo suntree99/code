@@ -1,0 +1,41 @@
+REST (REpresentational State Transfer) API
+Gaya arsitektural perangkat lunak yang di dalamnya mendefinisikan aturan-aturan untuk membuat web service.
+- Stateless*
+- Hampir selalu menggunakan HTTP
+- Memungkinkan interaksi antar mesin
+
+Ilustrasi (Waiter / Pelayan Restoran)
+- API adalah penghubung (Waiter)
+- REST API adalah aturannya (Menu)
+- Request dan Response (Pengiriman pesanan oleh waiter)
+- Data yang dikirim dan diterima - JSON (Pesanan)
+
+HTTP (HyperText Transfer Protocol)
+
+URL (Uniform Resources Locator)
+- Alamat dari sebuah resource yang dapat diakses di internet
+- Contoh : http://www.facebook.com/index.php (resourcesnya adalah index.php - walaupun jarang ditulis)
+- Meskipun bisa diubah dengan mod_rewrite atau .htaccess
+
+REST Client (hubungan user dengan aplikasi)
+REST Server (hubungan apilasi dengan API pihak lain)
+- 200 Success
+- 404 Not Found
+- 500 Server Errorr
+- dll.
+
+HTTP Method / Verbs (endpoints)
+- GET (Mengambil data)
+- POST (Menambah data)
+- PUT (Mengubah Data)
+- DELETE (Menghapus data)
+
+Stateless
+- Setiap request HTTP dilakukan secara terisolasi
+- Server tidak menyimpan state apapun mengenai sesi (session) dari client
+- Setiap request dari client harus berisi semua informasi yg dibutuhkan server, termasuk informasi otentikasi
+
+RESTful API
+- Menggunakan HTTP Method / Verbs (endpoints) yang benar
+- URI / endpoints-nya menggunakan kata benda, bukan kata kerja (sampai nama database kemudian langsung id)
+- Stateless*

@@ -1,0 +1,24 @@
+JSON (Javascrpit Object Notation)
+Sebuah file format standar yang menggunakan tulisan yang dapat dibaca oleh manusia untuk pertukaran data,
+yang di dalamnya berisi pasangan antara key dan value.
+
+JSON
+- Format pertukaran data tekstual yang sangat ringan
+- Sintaksnya sangat sederhana dan jelas (dibanding XML)
+- Dapat digunakan pada beragam bahasa pemrograman
+- Tiap bahasa pemrograman memiliki cara tersendiri untuk berinteraksi dengan JSON
+- Dibuat berdasarkan format Object pada javascript
+- Digunakan juga untuk file konfigurasi (tidak disarankan)
+- Tipe file JSON memiliki ekstensi .json
+- Format JSON dibuat dan diusulkan oleh Douglas Crockford
+
+- JSON berisi properti yang terdiri dari key dan value
+- Perbedaannya dengan Object pada Javascript, key pada JSON harus dibungkus kutip dua ("), valuenya tergantung tipe data.
+
+Tipe Data pada JSON (BASONN)
+- Boolean
+- Array
+- String
+- Object
+- Number
+- Null

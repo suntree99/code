@@ -82,7 +82,7 @@ table {
 body {
   font: 16px/28px arial, san-serif;
   background-color: #eaeaea;
-  background-image: url(background.png);
+  background-image: url(../img/background.png);
   color: #000;
 }
 
@@ -107,7 +107,7 @@ body {
 .twitter {
   width: 200px;
   height: 200px;
-  background-image: url(twitter_ribbon.png);
+  background-image: url(../img/twitter_ribbon.png);
   background-repeat: no-repeat;
   display: inline-block;
   position: absolute;
@@ -144,7 +144,7 @@ body {
 
 .hero {
   height: 350px;
-  background-image: url(scientist.png);
+  background-image: url(../img/scientist.png);
   background-size: cover;
   background-position: 0 0;
   border-top: 5px solid salmon;

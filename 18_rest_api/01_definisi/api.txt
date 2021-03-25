@@ -1,0 +1,39 @@
+API (Application Programming Interface)
+
+Definisi Umum:
+1. Wikipedia
+API adalah penerjemah komunikasi antara klien dengan server untuk menyederhanakan implementasi dan perbaikan software.
+API bisa diartikan juga sebagai sekumpulan perintah, fungsi, serta protokol yang dapat digunakan oleh programmer saat membangun perangkat lunak untuk sistem operasi tertentu.
+API memungkinkan programmer untuk menggunakan fungsi standar untuk berinteraksi dengan sistem operasi.
+Interface (antarmuka) adalah bagian yang sama (cocok) antara dua atau lebih komponen terpisah pada sebuah sistem komputer.
+
+2. API
+Antarmuka yang berupa kumpulan fungsi yang dapat 'dipanggil' atau dijalankan oleh program lain.
+Penerapannya sangat luas:
+- Bahasa Pemrograman (Contohnya: menghubungkan program dengan database - di PHP bisa dengan 'mysqli' atau 'PDO' | memanggil element html di Javascript menggunakan sintaks DOM)
+- Library & Framwork (Contohnya: mengambil data tabel - di CI menggunakan $this->db->get() | API JQuery untuk mengambil data menggunakan ajax)
+- Siste Operasi (Contohnya: Windows API - kernel.dll, win32.sys, user32.dll | iOS API - CNMutableContact(), AVCaptureDevice() | Android API - ContactsContract.RawContacts)
+- Web API / Web Service (Terdiri dari: SOAP - Simple Object Access Protocol | REST - REpresentational State Transfer)
+
+API -> Web Service -> REST API
+
+WEB API / WEB Service
+Sebuah sistem perangkat lunak yang dibuat untuk mendukung interoperabilitas / interaksi antar 2 aplikasi yang berbeda melalui jaringan (http).
+
+Pembahasan:
+- REST API
+- JSON (Skema untuk pertukaran data - membuat dan mengakses)
+- Public API (API yang dapat diakses umum : simple - harga ongkir, cuaca, dll. | complex auth - facebook, instagram, dll.)
+
+Pre-Requisite:
+- Javascript Dasar
+- Object
+- DOM
+- PHP Dasar
+- CodeIgniter
+
+Persiapan:
+- Code Editor (VS Code)
+- Web Server (XAMPP)
+- Web Browser (Chrome)
+- API Testing Tools (Postman / Insomnia)
