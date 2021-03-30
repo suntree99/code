@@ -1,11 +1,11 @@
-<?php 
+<?php
 
 // -------------------------
 // menjalankan session
 session_start();
 
 // pengondisian jika belum berhasil login, misalnya mencoba akses melalui url
-if ( !isset($_SESSION["login"]) ) {
+if (!isset($_SESSION["login"])) {
   header("Location: 5_login.php"); // mengembalikan ke halaman login
   exit;
 }
@@ -23,10 +23,10 @@ $kry = query("SELECT * FROM karyawan where id = $id")[0];
 // sehingga perlu ditambahkan [0] untuk mengakses isi data di dalamnya 
 
 // pengondisian alert jika tombol submit ditekan
-if ( isset($_POST["submit"]) ) {
+if (isset($_POST["submit"])) {
 
   // mengecek apakah data berhasil diubah atau tidak
-  if ( ubah($_POST) > 0 ) {
+  if (ubah($_POST) > 0) {
     echo "
       <script>
         alert('Data BERHASIL diubah');
@@ -45,6 +45,7 @@ if ( isset($_POST["submit"]) ) {
 
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -55,14 +56,14 @@ if ( isset($_POST["submit"]) ) {
 
     <title>Ubah Data Karyawan</title>
 
-    <style>.form-ubah { width: 500px; } </style>
-
   </head>
+
   <body>
 
     <!-- Awal Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary print-hilang"> <!-- menambahkan class "print-hilang" untuk style print -->
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary print-hilang">
+      <!-- menambahkan class "print-hilang" untuk style print -->
+      <div class="container">
         <a class="navbar-brand" href="#">Database Karyawan</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -85,21 +86,24 @@ if ( isset($_POST["submit"]) ) {
     </nav>
     <!-- Akhir Navbar -->
 
-    <h1 class="text-center mt-5 mb-5">Ubah Data Karyawan</h1>
+    <div class="container">
+      <div class="row text-center mb-5 mt-5">
+        <div class="col">
+          <h1>Ubah Data Karyawan</h1>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <!-- menambahkan attribute value pada setiap elemen input untuk menampilkan setiap nilai sebelumnya -->
+          <!-- menambahkan attribute enctype (encoding type) pada form untuk menangani jenis data yang berbeda (file/gambar) -->
+          <form class="m-auto" action="" method="post" enctype="multipart/form-data">
+            <!-- input string akan ditangani oleh $_POST, sedangkan input file akan ditangani oleh $_FILES -->
+      
+            <!-- menambahkan element input untuk id dengan type="hidden" agar tidak terlihat oleh user -->
+            <input type="hidden" name="id" value="<?= $kry["id"]; ?>">
+            <!-- menambahkan element input untuk gambar lama dengan type="hidden" sebagai gambar default jika tidak diganti -->
+            <input type="hidden" name="gambarLama" value="<?= $kry["gambar"]; ?>">
 
-    <!-- menambahkan attribute enctype (encoding type) pada form untuk menangani jenis data yang berbeda (file/gambar) -->
-    <form class="m-auto" action="" method="post" enctype="multipart/form-data">
-    <!-- input string akan ditangani oleh $_POST, sedangkan input file akan ditangani oleh $_FILES -->
-
-      <!-- menambahkan element input untuk id dengan type="hidden" agar tidak terlihat oleh user -->
-      <input type="hidden" name="id" value="<?= $kry["id"]; ?>">
-      <!-- menambahkan element input untuk gambar lama dengan type="hidden" sebagai gambar default jika tidak diganti -->
-      <input type="hidden" name="gambarLama" value="<?= $kry["gambar"]; ?>">
-
-      <div class="container">
-        <div class="row m-auto form-ubah">
-          <div class="col">
-            <!-- menambahkan attribute value pada setiap elemen input untuk menampilkan setiap nilai sebelumnya -->
             <div>
               <label class="form-label" for="nik">NIK :</label>
               <input class="form-control mb-3" type="text" name="nik" id="nik" required value="<?= $kry["nik"]; ?>">
@@ -124,13 +128,14 @@ if ( isset($_POST["submit"]) ) {
             <div>
               <button class="btn btn-primary m-auto mt-3" type="submit" name="submit">Ubah Data!</button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
-    </form>
-
+    </div>
+        
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
   </body>
+
 </html>
