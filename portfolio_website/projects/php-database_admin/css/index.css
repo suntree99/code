@@ -16,9 +16,9 @@
   display: none;
 }
 
-.cari {
+/* .cari {
   width: 676px;
-}
+} */
 
 tr:nth-child(odd) {
   background-color: #eee;
