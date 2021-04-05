@@ -1,78 +1,31 @@
-var arr = [-2,-2,-2,9,9,9,-2,7,9];
-var arrInput = arr;
-
-// function berdekatan(arrInput) {
+function solution(arrInput) {
 
     var n = arrInput.length; // menghitung jumlah elemen array input
-    var banyak = [];
-    var banyak2 = [];
-    var banyak3 = [];
+    var arrDekat = []; // membuat array kosong untuk menampung elemen array baru
 
-    // for (var i = 0; i < n; i++) {
-    //     angka = arrInput[i];
-    //     banyak[angka] = 0
-    // }
-    
-    for (var i = 0; i < n; i++) { // pengulangan dengan jumlah elemen array baru
+    for (var i = 0; i < n; i++) { // pengulangan dengan jumlah elemen array input
 
-    //     angka = arrInput[i];
-    //     banyak[angka] = 
-
-        if (arrInput[i] == arrInput[i+1]) {
-            banyak[i] = arrInput[i];
-        } else {
-            banyak[i] = undefined;
+        if (arrInput[i] == arrInput[i+1]) { // jika elemen yang berdekatan sama
+            arrDekat[i] = arrInput[i]; // masukkan nilai elemen array input ke elemen array baru 
+        } else { // jika tidak
+            arrDekat[i] = undefined; // isi nilai elemen dengan undefined 
         }
     
-        // var j = 0;
-        // do {
-        //     angka = arrInput[j];
-        //     banyak[angka].;
-        //     j++;
-        // }
-        // while ((arrInput[j] == arrInput[j-1]) && (j < (n)));
-
     }
 
-    var filtered = banyak.filter(function (el) {
-    return el != null;
+    var filtered = arrDekat.filter(function (el) { // menghilangan elemen yang undefined
+    return el != null; // mengembalikan elemen yang memiliki nilai
     });
 
-    if (filtered[0] == filtered[1]) {
-
-        m = filtered.length;
-    
-        for (var i = 0; i < m; i++) { // pengulangan dengan jumlah elemen array baru
-    
-            if (filtered[i] == filtered[i+1]) {
-                banyak2[i] = filtered[i];
-            } else {
-                banyak2[i] = undefined;
-            }
-    
-        }
-        
-        var filtered2 = banyak2.filter(function (el) {
-        return el != null;
-        });
-
+    if (filtered[0] == filtered[1]) { // pengondisian untuk mensortir elemen array baru  
+        solution(filtered); // memanggil function solution()
+    } else { // jika pengondisian selesai
+        var hasil = filtered[0]; // menampung nilai elemen hasil 
+        console.log(hasil); // tampilkan nilai elemen hasil pada console.log
     }
 
+}
 
-    // p = banyak2.length;
+var arr = [-2,-2,-2,9,9,9,-2,7,9]; // input contoh
 
-    // for (var i = 0; i < p; i++) { // pengulangan dengan jumlah elemen array baru
-
-    //     if (banyak2[i] == banyak2[i+1]) {
-    //         banyak3[i] = 1;
-    //     } else {
-    //         banyak2[i] = undefined;
-    //     }
-
-    // }
-
-// }
-    
-console.log(filtered2); // tampilkan nilai elemen array
-
-// berdekatan(arr);
+solution(arr); // menjalankan function solution() dengan input contoh

@@ -1,8 +1,7 @@
-var arr = [0,5,3,2,-1,6];
-
-function melipat(arrInput) {
+function solution(arrInput) {
 
     var n = arrInput.length; // menghitung jumlah elemen array input
+
     
     if ( n%2 == 0 ) { // jika jumlah elemen array input adalah GENAP
         
@@ -23,15 +22,16 @@ function melipat(arrInput) {
         }
 
         arrBaru[h] = arrInput[h]; // mengisi elemen akhir array baru dengan elemen tengah array input
-        
     }
     
     if (arrBaru.length > 1) { // jika jumlah elemen baru lebih dari 1
-        melipat(arrBaru); // memanggil fungsi melipat
-    } else { // jika jumlah elemen array baru sudah tinggal 1
-        console.log(arrBaru[0]); // keluarkan nilai elemen array pada console.log
+        solution(arrBaru); // memanggil function solution()
+    } else {
+        var hasil = arrBaru[0]; // menampung nilai elemen terakhir 
+        console.log(hasil); // menampilkan nilai elemen hasil pada console.log
     }
-
 }
 
-melipat(arr);
+var arr = [0,5,3,2,-1,6]; // input contoh
+
+solution(arr); // menjalankan function solution() dengan input contoh
