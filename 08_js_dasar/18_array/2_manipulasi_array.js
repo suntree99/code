@@ -27,7 +27,7 @@ for ( i = 0; i < arr.length; i++) {
 
 // * .join
 var arr = ["Budi", "Iwan", "Wati", "Santi"]
-console.log(arr.join());
+console.log(arr.join()); // koma (,) adalah separator defaultnya
 console.log(arr.join(" - "));
 
 // * .push (menambah elemen di akhir)
@@ -45,68 +45,69 @@ console.log(arr.join(" - "));
 
 // * shift (menghapus elemen awal)
 arr.shift();
+
 console.log(arr.join(" - "));
 
-// * splice
-// splice(indexAwal, mauDihapusBerapa, elemenBaru1, elemenBaru2, ...);
+// * splice (menyisipkan)
+// splice(indexAwalPenyisipan, mauDihapusBerapa, elemenBaru1, elemenBaru2, ...);
 arr.splice(2, 0, "Doddy");
 console.log(arr.join(" - "));
 
 arr.splice(1, 2, "Dani", "Fitri");
 console.log(arr.join(" - "));
 
-// * slice
-// slice(indexAwal, indexAhrir);
+// * slice (memotong)
+// slice(indexAwal, batasIndexAkhir); // batasIndexAkhir tidak termasuk array yang baru
 arr2 = arr.slice(1, 4);
 console.log(arr2.join(" - "));
 console.log(arr.join(" - "));
 
-// * forEach
+// * forEach(function())
 var angka = [1,2,3,4,5,6,7,8];
 // for (var i = 0; i < angka.length; i++) {
 //   console.log(angka[i]);
 // }
 
-angka.forEach(function(e){
+angka.forEach(function(e){ // e adalah elemen
   console.log(e);
 });
 
-arr.forEach(function(e, i) {
+arr.forEach(function(e, i) { // i adalah index
   console.log("Mahasiswa ke-" + (i+1) + " adalah: " + e);
 })
 
-// * map
+// * map(function()) (memetakan array)
 var angka2 = angka.map(function(e) {
   return e * 2; 
 });
 
 console.log(angka2.join(" - "));
 
-// * Sort
+// * Sort (mengurutkan berdasarkan angka depan)
 var angka = [1,2,5,10,20,4,3,6,8,7];
 
 angka.sort();
 console.log(angka.join(" - "));
 
-angka.sort(function(a,b) {
-  return a-b;
+angka.sort(function(a,b) { // function(a,b) digunakan untuk mengurutkan dengan benar
+  return a-b; // a-b untuk mengurutkan dari terkecil-terbesar 
 });
 console.log(angka.join(" - "));
 
-// * find (mengembalikan satu nilai)
+// * find(function()) (mencari satu nilai)
 
 var angka3 = angka.find(function(x) {
+  return x > 5; // mencari satu nilai > 5
+});
+console.log(angka3);
+
+// * filter (bisa mengembalikan banyak nilai -> dalam bentuk array)
+var angka3 = angka.filter(function(x) {
   return x > 5;
 });
 console.log(angka3);
 
-// * filter (bisa mengembalikan banyak nilai / array)
-var angka3 = angka.filter(function(x) {
-  return x == 5;
-});
-console.log(angka3);
-
-var angka3 = angka.filter(function(x) {
+var angka3 = angka.filter(function(x) { // angka yang tidak ada mengembalikan array kosong
   return x == 9;
 });
 console.log(angka3);
