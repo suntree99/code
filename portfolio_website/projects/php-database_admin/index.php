@@ -91,7 +91,7 @@ if (isset($_POST["cari"])) {
       <div class="col-md-6">
         <form class="cari d-print-none" method="post">
           <!-- menambahkan class "d-print-none" untuk style print -->
-          <input class="form-control" type="search" aria-label="Search" name="keyword" size="40px" autofocus placeholder="masukkan keyword pencarian..." autocomplete="off" id="keyword">
+          <input class="form-control" type="search" aria-label="Search" name="keyword" size="30px" autofocus placeholder="masukkan keyword pencarian..." autocomplete="off" id="keyword">
           <button class="btn btn-outline-success" type="submit" name="cari" id="tombolCari">Search</button>
         </form>
 
@@ -116,7 +116,7 @@ if (isset($_POST["cari"])) {
   <!-- </form> -->
 
   <!-- ---------------------------------------------------------------------------------------------------- -->
-  <div id="container" class="container">
+  <div id="container" class="container mb-5">
     <!-- menambahkan container untuk batasan ajax -->
     <table cellpadding="10" cellspacing="0" class="m-auto">
 

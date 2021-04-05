@@ -71,8 +71,8 @@ if (isset($_POST["register"])) {
     <!-- Akhir SVG Path  -->
 
     <!-- Footer -->
-    <footer class="bg-primary text-white text-center pb-5">
-      <p class="pt-5">
+    <footer class="bg-primary text-white text-center pt-3 pb-3">
+      <p>
         by <span class="fw-bold">Budi Darmawan</span>
       </p>
     </footer>
