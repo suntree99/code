@@ -1,20 +1,4 @@
-// var int = 4; // contoh input
-
-// function pointer(input) { // function pointer()
-
-//     var counter = 0; // membuat variabel counter untuk pointer
-//     i = 0; // inisialisasi index
-
-//     while ( i < input ) { // selama index lebih kecil dari input
-//         counter += 1 ; // tambahkan nilai 1
-//         i++; // pendambahan index untuk looping
-//     }
-
-//     return counter; // mengembalikan nilai counter
-
-// }
-
-// console.log(pointer(int)) // memanggil function pointer() dan menampilkan nilai hasil pada console.log
+// Linked List
 
 class Node {
   constructor(data, next = null) {
